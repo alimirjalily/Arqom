@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zamin.Utilities.OpenTelemetryRegistration.Monitoring;
+namespace Arqom.Utilities.OpenTelemetryRegistration.Monitoring;
 public class MetricReporter
 {
     private readonly Counter<int> _requestCounter;

@@ -8,13 +8,13 @@
 
 		<ItemGroup>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
-				<PackageReference Include="Zamin.Extensions.Serializers.Abstractions" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.Translations.Abstractions" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.Translations.Parrot" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Serializers.Abstractions" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Translations.Abstractions" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Translations.Parrot" Version="9.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.Serializers.EPPlus\Zamin.Extensions.Serializers.EPPlus.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.Serializers.EPPlus\Arqom.Extensions.Serializers.EPPlus.csproj" />
 		</ItemGroup>
 
 </Project>

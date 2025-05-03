@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Zamin.Utilities.OpenTelemetryRegistration.Sample.Controllers
+namespace Arqom.Utilities.OpenTelemetryRegistration.Sample.Controllers
 {
     [ApiController]
     [Route("[controller]")]

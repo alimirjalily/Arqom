@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Text.Json;
-using Zamin.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
 
-namespace Zamin.Extensions.Serializers.Microsoft.Services;
+namespace Arqom.Extensions.Serializers.Microsoft.Services;
 
 public class MicrosoftSerializer : IJsonSerializer, IDisposable
 {

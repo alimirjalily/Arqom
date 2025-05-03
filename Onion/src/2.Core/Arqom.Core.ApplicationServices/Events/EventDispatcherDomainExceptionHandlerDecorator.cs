@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using Zamin.Core.Domain.Exceptions;
-using Zamin.Extensions.Logger.Abstractions;
+using Arqom.Core.Domain.Exceptions;
+using Arqom.Extensions.Logger.Abstractions;
 
-namespace Zamin.Core.ApplicationServices.Events;
+namespace Arqom.Core.ApplicationServices.Events;
 
 public class EventDispatcherDomainExceptionHandlerDecorator : EventDispatcherDecorator
 {
@@ -27,13 +27,13 @@ public class EventDispatcherDomainExceptionHandlerDecorator : EventDispatcherDec
         }
         catch (DomainStateException ex)
         {
-            _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {EventType} With value {Event} failed at {StartDateTime} because there are domain exceptions.", @event.GetType(), @event, DateTime.Now);
+            _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {EventType} With value {Event} failed at {StartDateTime} because there are domain exceptions.", @event.GetType(), @event, DateTime.Now);
         }
         catch (AggregateException ex)
         {
             if (ex.InnerException is DomainStateException domainStateException)
             {
-                _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {EventType} With value {Event} failed at {StartDateTime} because there are domain exceptions.", @event.GetType(), @event, DateTime.Now);
+                _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {EventType} With value {Event} failed at {StartDateTime} because there are domain exceptions.", @event.GetType(), @event, DateTime.Now);
             }
             throw ex;
         }

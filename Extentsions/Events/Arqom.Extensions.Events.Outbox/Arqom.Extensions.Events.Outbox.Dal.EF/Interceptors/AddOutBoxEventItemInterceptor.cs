@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Diagnostics;
-using Zamin.Core.Domain.Entities;
-using Zamin.Extensions.Events.Abstractions;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Core.Domain.Entities;
+using Arqom.Extensions.Events.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Extensions.Events.Outbox.Dal.EF.Interceptors;
+namespace Arqom.Extensions.Events.Outbox.Dal.EF.Interceptors;
 
 public class AddOutBoxEventItemInterceptor : SaveChangesInterceptor
 {

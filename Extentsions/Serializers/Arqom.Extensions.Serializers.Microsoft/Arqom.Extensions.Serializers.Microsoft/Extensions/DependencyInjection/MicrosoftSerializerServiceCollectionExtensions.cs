@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.Serializers.Microsoft.Services;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Serializers.Microsoft.Services;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class MicrosoftSerializerServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminMicrosoftSerializer(this IServiceCollection services)
+    public static IServiceCollection AddArqomMicrosoftSerializer(this IServiceCollection services)
         => services.AddSingleton<IJsonSerializer, MicrosoftSerializer>();
 }

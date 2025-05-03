@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
 
-namespace Zamin.Extensions.Translations.Parrot.Sample.Controllers;
+namespace Arqom.Extensions.Translations.Parrot.Sample.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class ParrotController : ControllerBase

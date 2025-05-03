@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Zamin.Utilities.OpenTelemetryRegistration.Sample.Models
+namespace Arqom.Utilities.OpenTelemetryRegistration.Sample.Models
 {
     public static class SeedData
     {

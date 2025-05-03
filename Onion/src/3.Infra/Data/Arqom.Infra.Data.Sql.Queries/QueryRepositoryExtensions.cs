@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Zamin.Core.Contracts.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Queries;
-using Zamin.Utilities.Extensions;
+using Arqom.Core.Contracts.ApplicationServices.Queries;
+using Arqom.Core.RequestResponse.Queries;
+using Arqom.Utilities.Extensions;
 
-namespace Zamin.Infra.Data.Sql.Queries;
+namespace Arqom.Infra.Data.Sql.Queries;
 
 public static class QueryRepositoryExtensions
 {

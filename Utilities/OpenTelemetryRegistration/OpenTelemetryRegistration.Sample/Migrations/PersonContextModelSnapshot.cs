@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Zamin.Utilities.OpenTelemetryRegistration.Sample.Models;
+using Arqom.Utilities.OpenTelemetryRegistration.Sample.Models;
 
 #nullable disable
 

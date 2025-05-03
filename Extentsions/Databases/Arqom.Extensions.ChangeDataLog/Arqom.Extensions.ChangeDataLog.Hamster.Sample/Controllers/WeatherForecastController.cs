@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.ChangeDataLog.Hamster.Sample.DAL;
+using Arqom.Extensions.ChangeDataLog.Hamster.Sample.DAL;
 
-namespace Zamin.Extensions.ChangeDataLog.Hamster.Sample.Controllers
+namespace Arqom.Extensions.ChangeDataLog.Hamster.Sample.Controllers
 {
     [ApiController]
     [Route("[controller]")]

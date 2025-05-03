@@ -1,8 +1,8 @@
 ﻿using RabbitMQ.Client.Events;
 using System.Text;
-using Zamin.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.Abstractions;
 
-namespace Zamin.Extensions.MessageBus.RabbitMQ.Extensions;
+namespace Arqom.Extensions.MessageBus.RabbitMQ.Extensions;
 static class RabbitExtensions
 {
     public static Parcel ToParcel(this BasicDeliverEventArgs basicDeliverEventArgs)

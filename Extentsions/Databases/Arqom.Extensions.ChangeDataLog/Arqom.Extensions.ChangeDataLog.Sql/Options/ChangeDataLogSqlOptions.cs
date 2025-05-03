@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.ChangeDataLog.Sql.Options;
+﻿namespace Arqom.Extensions.ChangeDataLog.Sql.Options;
 
 public sealed record ChangeDataLogSqlOptions
 {

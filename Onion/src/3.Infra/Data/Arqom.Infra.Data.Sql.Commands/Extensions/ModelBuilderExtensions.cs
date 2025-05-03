@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Zamin.Core.Domain.Entities;
-using Zamin.Core.Domain.ValueObjects;
+using Arqom.Core.Domain.Entities;
+using Arqom.Core.Domain.ValueObjects;
 
-namespace Zamin.Infra.Data.Sql.Commands.Extensions;
+namespace Arqom.Infra.Data.Sql.Commands.Extensions;
 public static class ModelBuilderExtensions
 {
     public static void AddBusinessId(this ModelBuilder modelBuilder)

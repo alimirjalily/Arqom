@@ -1,4 +1,4 @@
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,20 +8,20 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddZaminNewtonSoftSerializer();
-builder.Services.AddZaminRabbitMqMessageBus(c =>
+builder.Services.AddArqomNewtonSoftSerializer();
+builder.Services.AddArqomRabbitMqMessageBus(c =>
 {
     c.PerssistMessage = true;
     c.ExchangeName = "MiniBlogExchange";
     c.ServiceName = "SampleApplciatoinReceiver";
     c.Url = @"amqp://guest:guest@localhost:5672/";
 });
-builder.Services.AddZaminMessageInbox(c =>
+builder.Services.AddArqomMessageInbox(c =>
 {
     c.ApplicationName = "SampleApplciatoinReceiver";
     //c.ConnectionString = "Server=.;Initial Catalog=InboxDb;User Id=sa; Password=1qaz!QAZ;Encrypt=false";
 });
-builder.Services.AddZaminMessageInboxDalSql(c =>
+builder.Services.AddArqomMessageInboxDalSql(c =>
 {
     //c.TableName = "MessageInbox";
     c.SchemaName = "dbo";

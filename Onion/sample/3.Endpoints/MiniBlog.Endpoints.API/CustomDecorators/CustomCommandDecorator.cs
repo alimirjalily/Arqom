@@ -1,6 +1,6 @@
-﻿using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.Contracts.ApplicationServices.Commands;
-using Zamin.Core.RequestResponse.Commands;
+﻿using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.Contracts.ApplicationServices.Commands;
+using Arqom.Core.RequestResponse.Commands;
 
 namespace MiniBlog.Endpoints.API.CustomDecorators;
 

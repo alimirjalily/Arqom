@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.UsersManagement.Sample": {
+    "Arqom.Extensions.UsersManagement.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

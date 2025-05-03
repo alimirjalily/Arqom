@@ -1,5 +1,5 @@
-﻿using Zamin.Core.RequestResponse.Endpoints;
-using Zamin.Core.RequestResponse.Queries;
+﻿using Arqom.Core.RequestResponse.Endpoints;
+using Arqom.Core.RequestResponse.Queries;
 
 namespace MiniBlog.Core.RequestResponse.Blogs.Queries.GetById;
 

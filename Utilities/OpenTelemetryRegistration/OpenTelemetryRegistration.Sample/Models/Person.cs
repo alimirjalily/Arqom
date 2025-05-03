@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Zamin.Utilities.OpenTelemetryRegistration.Sample.Models
+namespace Arqom.Utilities.OpenTelemetryRegistration.Sample.Models
 {
     public class Person
     {

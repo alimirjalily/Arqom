@@ -1,4 +1,4 @@
-﻿namespace Zamin.Core.RequestResponse.Queries;
+﻿namespace Arqom.Core.RequestResponse.Queries;
 /// <summary>
 /// ساختار پایه جهت بازگشت داده‌ها هنگام کوئری گرفتن وقتی که Paging دارد
 /// </summary>

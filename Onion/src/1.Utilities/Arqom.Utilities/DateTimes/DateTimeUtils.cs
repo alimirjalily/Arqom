@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.DateTimes;
+﻿namespace Arqom.Utilities.DateTimes;
 /// <summary>
 /// متدهای کمکی جهت کار با تاریخ میلادی
 /// </summary>

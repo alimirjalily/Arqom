@@ -1,7 +1,7 @@
-﻿using Zamin.Core.Contracts.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Queries;
+﻿using Arqom.Core.Contracts.ApplicationServices.Queries;
+using Arqom.Core.RequestResponse.Queries;
 
-namespace Zamin.Core.ApplicationServices.Queries;
+namespace Arqom.Core.ApplicationServices.Queries;
 
 public abstract class QueryDispatcherDecorator : IQueryDispatcher
 {

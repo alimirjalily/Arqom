@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.Options;
 using System.Reflection;
-using Zamin.Core.Contracts.ApplicationServices.Commands;
-using Zamin.Core.Contracts.ApplicationServices.Events;
-using Zamin.Core.Domain.Events;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Extensions.MessageBus.Abstractions;
-using Zamin.Extensions.MessageBus.MessageInbox.Options;
-using Zamin.Extensions.Serializers.Abstractions;
+using Arqom.Core.Contracts.ApplicationServices.Commands;
+using Arqom.Core.Contracts.ApplicationServices.Events;
+using Arqom.Core.Domain.Events;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.MessageInbox.Options;
+using Arqom.Extensions.Serializers.Abstractions;
 
-namespace Zamin.Extensions.MessageBus.MessageInbox;
+namespace Arqom.Extensions.MessageBus.MessageInbox;
 public class InboxMessageConsumer : IMessageConsumer
 {
     private readonly MessageInboxOptions _messageInboxOptions;

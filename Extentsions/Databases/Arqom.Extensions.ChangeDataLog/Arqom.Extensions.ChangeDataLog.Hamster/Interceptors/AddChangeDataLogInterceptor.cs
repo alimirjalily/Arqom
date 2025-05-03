@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Options;
-using Zamin.Extensions.ChangeDataLog.Abstractions;
-using Zamin.Extensions.ChangeDataLog.Sql.Options;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.ChangeDataLog.Abstractions;
+using Arqom.Extensions.ChangeDataLog.Sql.Options;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Infra.Data.Sql.Commands.Interceptors;
+namespace Arqom.Infra.Data.Sql.Commands.Interceptors;
 
 public sealed class AddChangeDataLogInterceptor : SaveChangesInterceptor
 {

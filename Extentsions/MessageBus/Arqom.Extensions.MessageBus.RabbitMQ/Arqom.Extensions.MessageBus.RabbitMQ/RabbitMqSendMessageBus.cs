@@ -2,12 +2,12 @@
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using System.Diagnostics;
-using Zamin.Extensions.MessageBus.RabbitMQ.Options;
-using Zamin.Extensions.MessageBus.Abstractions;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Utilities.Extensions;
+using Arqom.Extensions.MessageBus.RabbitMQ.Options;
+using Arqom.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Utilities.Extensions;
 
-namespace Zamin.Extensions.MessageBus.RabbitMQ
+namespace Arqom.Extensions.MessageBus.RabbitMQ
 {
     public class RabbitMqSendMessageBus : IDisposable, ISendMessageBus
     {

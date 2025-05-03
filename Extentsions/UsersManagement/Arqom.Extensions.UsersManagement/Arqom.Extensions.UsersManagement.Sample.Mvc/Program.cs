@@ -1,4 +1,4 @@
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,7 @@ builder.Services.AddAuthentication(options =>
     });
 
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddZaminWebUserInfoService(c =>
+builder.Services.AddArqomWebUserInfoService(c =>
 {
     c.DefaultUserId = "1";
 });

@@ -1,4 +1,4 @@
-namespace Zamin.Extensions.UsersManagement.Sample.Mvc.Models
+namespace Arqom.Extensions.UsersManagement.Sample.Mvc.Models
 {
     public class ErrorViewModel
     {

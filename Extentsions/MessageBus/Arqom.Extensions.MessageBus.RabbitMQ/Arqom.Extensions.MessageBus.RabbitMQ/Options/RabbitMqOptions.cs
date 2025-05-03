@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.MessageBus.RabbitMQ.Options
+﻿namespace Arqom.Extensions.MessageBus.RabbitMQ.Options
 {
     public class RabbitMqOptions
     {

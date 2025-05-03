@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.Caching.InMemory.Sample": {
+    "Arqom.Extensions.Caching.InMemory.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

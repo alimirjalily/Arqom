@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.VisualBasic;
-using Zamin.Core.Domain.Entities;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Core.Domain.Entities;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Infra.Data.Sql.Commands.Extensions;
+namespace Arqom.Infra.Data.Sql.Commands.Extensions;
 public static class AuditableShadowProperties
 {
     public static readonly Func<object, string> EFPropertyCreatedByUserId =

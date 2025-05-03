@@ -1,9 +1,9 @@
 ﻿using System.Data;
-using Zamin.Extensions.Serializers.EPPlus.Extensions;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Extensions.Serializers.EPPlus.Extensions;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
 
-namespace Zamin.Extensions.Serializers.EPPlus.Services;
+namespace Arqom.Extensions.Serializers.EPPlus.Services;
 
 public class EPPlusExcelSerializer : IExcelSerializer
 {

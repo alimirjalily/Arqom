@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Domain.Exceptions;
+﻿using Arqom.Core.Domain.Exceptions;
 
-namespace Zamin.Core.Domain.ValueObjects;
+namespace Arqom.Core.Domain.ValueObjects;
 public class BusinessId : BaseValueObject<BusinessId>
 {
     public static BusinessId FromString(string value) => new(value);

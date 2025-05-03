@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.MessageBus.RabbitMQ.Sample.Models
+﻿namespace Arqom.Extensions.MessageBus.RabbitMQ.Sample.Models
 {
     public class PersonEvent
     {

@@ -2,10 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyModel;
 using System.Reflection;
-using Zamin.Extensions.DependencyInjection.Abstractions;
-using Zamin.Extensions.DependencyInjection.Options;
+using Arqom.Extensions.DependencyInjection.Abstractions;
+using Arqom.Extensions.DependencyInjection.Options;
 
-namespace Zamin.Extensions.DependencyInjection.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection.Extensions.DependencyInjection;
 
 public static class DependencyInjectionServiceCollectionExtensions
 {

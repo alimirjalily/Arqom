@@ -1,4 +1,4 @@
-﻿namespace Zamin.Core.Domain.Entities;
+﻿namespace Arqom.Core.Domain.Entities;
 
 public interface IAuditableEntity
 {

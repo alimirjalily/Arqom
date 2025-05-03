@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Data.Common;
-using Zamin.Infra.Data.Sql.Commands.Extensions;
-namespace Zamin.Infra.Data.Sql.Commands.Interceptors;
+using Arqom.Infra.Data.Sql.Commands.Extensions;
+namespace Arqom.Infra.Data.Sql.Commands.Interceptors;
 
 public class SetPersianYeKeInterceptor: DbCommandInterceptor
 {

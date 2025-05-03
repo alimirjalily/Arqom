@@ -1,12 +1,12 @@
-﻿using Zamin.Core.Domain.Exceptions;
+﻿using Arqom.Core.Domain.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Zamin.Extensions.Logger.Abstractions;
-using Zamin.Extensions.Translations.Abstractions;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Core.RequestResponse.Common;
+using Arqom.Extensions.Logger.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Core.RequestResponse.Common;
 
-namespace Zamin.Core.ApplicationServices.Commands;
+namespace Arqom.Core.ApplicationServices.Commands;
 
 public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatcherDecorator
 {
@@ -36,14 +36,14 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
         }
         catch (DomainStateException ex)
         {
-            _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+            _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
             return DomainExceptionHandlingWithoutReturnValue<TCommand>(ex);
         }
         catch (AggregateException ex)
         {
             if (ex.InnerException is DomainStateException domainStateException)
             {
-                _logger.LogError(ZaminEventId.DomainValidationException, domainStateException, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+                _logger.LogError(ArqomEventId.DomainValidationException, domainStateException, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
                 return DomainExceptionHandlingWithoutReturnValue<TCommand>(domainStateException);
             }
             throw ex;
@@ -61,14 +61,14 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
         }
         catch (DomainStateException ex)
         {
-            _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+            _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
             return DomainExceptionHandlingWithReturnValue<TCommand, TData>(ex);
         }
         catch (AggregateException ex)
         {
             if (ex.InnerException is DomainStateException domainStateException)
             {
-                _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
+                _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {CommandType} With value {Command} failed at {StartDateTime} because there are domain exceptions.", command.GetType(), command, DateTime.Now);
                 return DomainExceptionHandlingWithReturnValue<TCommand, TData>(domainStateException);
             }
             throw ex;
@@ -111,7 +111,7 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
              translator[domainStateException.Message, domainStateException.Parameters] :
                translator[domainStateException?.Message];
 
-        _logger.LogInformation(ZaminEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
+        _logger.LogInformation(ArqomEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
 
         return result;
     }

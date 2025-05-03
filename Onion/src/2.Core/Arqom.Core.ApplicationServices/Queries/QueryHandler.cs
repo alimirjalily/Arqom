@@ -1,13 +1,13 @@
-﻿using Zamin.Core.Contracts.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Common;
-using Zamin.Core.RequestResponse.Queries;
-using Zamin.Utilities;
+﻿using Arqom.Core.Contracts.ApplicationServices.Queries;
+using Arqom.Core.RequestResponse.Common;
+using Arqom.Core.RequestResponse.Queries;
+using Arqom.Utilities;
 
-namespace Zamin.Core.ApplicationServices.Queries;
+namespace Arqom.Core.ApplicationServices.Queries;
 public abstract class QueryHandler<TQuery, TData> : IQueryHandler<TQuery, TData>
     where TQuery : class, IQuery<TData>
 {
-    protected readonly ZaminServices _zaminServices;
+    protected readonly ArqomServices _ArqomServices;
     protected readonly QueryResult<TData> result = new();
 
     protected virtual Task<QueryResult<TData>> ResultAsync(TData data, ApplicationServiceStatus status)
@@ -36,19 +36,19 @@ public abstract class QueryHandler<TQuery, TData> : IQueryHandler<TQuery, TData>
         return Result(data, status);
     }
 
-    public QueryHandler(ZaminServices zaminServices)
+    public QueryHandler(ArqomServices ArqomServices)
     {
-        _zaminServices = zaminServices;
+        _ArqomServices = ArqomServices;
     }
 
     protected void AddMessage(string message)
     {
-        result.AddMessage(_zaminServices.Translator[message]);
+        result.AddMessage(_ArqomServices.Translator[message]);
     }
 
     protected void AddMessage(string message, params string[] arguments)
     {
-        result.AddMessage(_zaminServices.Translator[message, arguments]);
+        result.AddMessage(_ArqomServices.Translator[message, arguments]);
     }
 
     public abstract Task<QueryResult<TData>> Handle(TQuery query);

@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.Events.PollingPublisher.Options
+﻿namespace Arqom.Extensions.Events.PollingPublisher.Options
 {
     public class PollingPublisherOptions
     {

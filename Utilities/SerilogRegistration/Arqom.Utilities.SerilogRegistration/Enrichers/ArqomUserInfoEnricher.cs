@@ -1,14 +1,14 @@
 ﻿using Serilog.Core;
 using Serilog.Events;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Utilities.SerilogRegistration.Enrichers;
+namespace Arqom.Utilities.SerilogRegistration.Enrichers;
 
-public class ZaminUserInfoEnricher : ILogEventEnricher
+public class ArqomUserInfoEnricher : ILogEventEnricher
 {
     private readonly IUserInfoService _userInfoService;
 
-    public ZaminUserInfoEnricher(IUserInfoService userInfoService)
+    public ArqomUserInfoEnricher(IUserInfoService userInfoService)
     {
         this._userInfoService = userInfoService;
     }

@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.DependencyInjection.Sample.Services;
+﻿namespace Arqom.Extensions.DependencyInjection.Sample.Services;
 
 public class GetGuidSingletoneService : IGetGuidSingletoneService
 {

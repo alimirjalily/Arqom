@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.Caching.Abstractions;
-using Zamin.Extensions.Caching.InMemory.Services;
+using Arqom.Extensions.Caching.Abstractions;
+using Arqom.Extensions.Caching.InMemory.Services;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class InMemoryCachingServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminInMemoryCaching(this IServiceCollection services)
+    public static IServiceCollection AddArqomInMemoryCaching(this IServiceCollection services)
         => services.AddMemoryCache().AddTransient<ICacheAdapter, InMemoryCacheAdapter>();
 }

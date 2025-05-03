@@ -1,8 +1,8 @@
-﻿using Zamin.Core.Domain.Exceptions;
-using Zamin.Core.Domain.ValueObjects;
-using Zamin.Utilities.Extensions;
+﻿using Arqom.Core.Domain.Exceptions;
+using Arqom.Core.Domain.ValueObjects;
+using Arqom.Utilities.Extensions;
 
-namespace Zamin.Core.Domain.Toolkits.ValueObjects;
+namespace Arqom.Core.Domain.Toolkits.ValueObjects;
 public class NationalCode : BaseValueObject<NationalCode>
 {
     #region Properties

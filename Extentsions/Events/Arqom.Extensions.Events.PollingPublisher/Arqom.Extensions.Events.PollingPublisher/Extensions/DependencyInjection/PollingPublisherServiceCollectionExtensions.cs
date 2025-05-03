@@ -1,26 +1,26 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.Events.PollingPublisher;
-using Zamin.Extensions.Events.PollingPublisher.Options;
+using Arqom.Extensions.Events.PollingPublisher;
+using Arqom.Extensions.Events.PollingPublisher.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class PollingPublisherServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminPollingPublisher(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomPollingPublisher(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<PollingPublisherOptions>(configuration);
         AddServices(services);
         return services;
     }
 
-    public static IServiceCollection AddZaminPollingPublisher(this IServiceCollection services, IConfiguration configuration, string sectionName)
+    public static IServiceCollection AddArqomPollingPublisher(this IServiceCollection services, IConfiguration configuration, string sectionName)
     {
-        services.AddZaminPollingPublisher(configuration.GetSection(sectionName));
+        services.AddArqomPollingPublisher(configuration.GetSection(sectionName));
         return services;
     }
 
-    public static IServiceCollection AddZaminPollingPublisher(this IServiceCollection services, Action<PollingPublisherOptions> setupAction)
+    public static IServiceCollection AddArqomPollingPublisher(this IServiceCollection services, Action<PollingPublisherOptions> setupAction)
     {
         services.Configure(setupAction);
         AddServices(services);

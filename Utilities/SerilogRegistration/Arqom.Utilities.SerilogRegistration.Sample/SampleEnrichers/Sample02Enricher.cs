@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
 using Serilog.Core;
 using Serilog.Events;
-using Zamin.Utilities.SerilogRegistration.Options;
+using Arqom.Utilities.SerilogRegistration.Options;
 
-namespace Zamin.Utilities.SerilogRegistration.Sample.SampleEnrichers;
+namespace Arqom.Utilities.SerilogRegistration.Sample.SampleEnrichers;
 
 public class Sample02Enricher : ILogEventEnricher
 {

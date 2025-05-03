@@ -1,4 +1,4 @@
-﻿using Zamin.Extensions.DependencyInjection;
+﻿using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddZaminParrotTranslator(c =>
+builder.Services.AddArqomParrotTranslator(c =>
 {
     c.ConnectionString = "Server =.; Database= MiniBlogDb;User Id = sa;Password=1qaz!QAZ; MultipleActiveResultSets=true";
     c.AutoCreateSqlTable = true;

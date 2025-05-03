@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Domain.ValueObjects;
+﻿using Arqom.Core.Domain.ValueObjects;
 
-namespace Zamin.Core.Domain.Entities;
+namespace Arqom.Core.Domain.Entities;
 /// <summary>
 /// کلاس پایه برای تمامی Entityها موجود در سامانه
 /// </summary>

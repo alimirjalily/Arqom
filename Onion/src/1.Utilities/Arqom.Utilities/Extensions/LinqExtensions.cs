@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Zamin.Utilities.Extensions;
+namespace Arqom.Utilities.Extensions;
 
 public static class LinqExtensions
 {

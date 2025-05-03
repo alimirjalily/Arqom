@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Zamin.Extensions.ChangeDataLog.Hamster.Sample.DAL
+namespace Arqom.Extensions.ChangeDataLog.Hamster.Sample.DAL
 {
     public class Person
     {

@@ -1,9 +1,9 @@
 ﻿using MiniBlog.Core.Contracts.Blogs.Commands;
 using MiniBlog.Core.Domain.Blogs.Entities;
 using MiniBlog.Core.RequestResponse.Blogs.Commands.Create;
-using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Utilities;
+using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Utilities;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Commands.Create;
 
@@ -11,8 +11,8 @@ public class CreateBlogCommandHandler : CommandHandler<CreateBlogCommand, Guid>
 {
     private readonly IBlogCommandRepository _blogCommandRepository;
 
-    public CreateBlogCommandHandler(ZaminServices zaminServices,
-                                    IBlogCommandRepository blogCommandRepository) : base(zaminServices)
+    public CreateBlogCommandHandler(ArqomServices ArqomServices,
+                                    IBlogCommandRepository blogCommandRepository) : base(ArqomServices)
     {
         _blogCommandRepository = blogCommandRepository;
     }

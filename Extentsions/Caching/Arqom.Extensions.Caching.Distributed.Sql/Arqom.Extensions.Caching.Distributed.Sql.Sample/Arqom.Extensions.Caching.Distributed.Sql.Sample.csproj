@@ -11,7 +11,7 @@
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.Caching.Distributed.Sql\Zamin.Extensions.Caching.Distributed.Sql.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.Caching.Distributed.Sql\Arqom.Extensions.Caching.Distributed.Sql.csproj" />
 		</ItemGroup>
 
 </Project>

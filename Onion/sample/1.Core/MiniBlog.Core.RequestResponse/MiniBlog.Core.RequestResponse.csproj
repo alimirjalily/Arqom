@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Zamin.Extensions.Translations.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Arqom.Extensions.Translations.Abstractions" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\2.Core\Zamin.Core.RequestResponse\Zamin.Core.RequestResponse.csproj" />
+    <ProjectReference Include="..\..\..\src\2.Core\Arqom.Core.RequestResponse\Arqom.Core.RequestResponse.csproj" />
   </ItemGroup>
 
 </Project>

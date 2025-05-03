@@ -1,8 +1,8 @@
 ﻿using MiniBlog.Core.Domain.Blogs.Events;
-using Zamin.Core.Domain.Entities;
-using Zamin.Core.Domain.Exceptions;
-using Zamin.Core.Domain.Toolkits.ValueObjects;
-using Zamin.Core.Domain.ValueObjects;
+using Arqom.Core.Domain.Entities;
+using Arqom.Core.Domain.Exceptions;
+using Arqom.Core.Domain.Toolkits.ValueObjects;
+using Arqom.Core.Domain.ValueObjects;
 
 namespace MiniBlog.Core.Domain.Blogs.Entities;
 

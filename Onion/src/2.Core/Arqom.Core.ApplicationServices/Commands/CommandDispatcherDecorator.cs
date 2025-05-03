@@ -1,7 +1,7 @@
-﻿using Zamin.Core.Contracts.ApplicationServices.Commands;
-using Zamin.Core.RequestResponse.Commands;
+﻿using Arqom.Core.Contracts.ApplicationServices.Commands;
+using Arqom.Core.RequestResponse.Commands;
 
-namespace Zamin.Core.ApplicationServices.Commands;
+namespace Arqom.Core.ApplicationServices.Commands;
 
 public abstract class CommandDispatcherDecorator : ICommandDispatcher
 {

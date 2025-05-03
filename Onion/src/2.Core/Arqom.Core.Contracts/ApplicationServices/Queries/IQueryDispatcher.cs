@@ -1,6 +1,6 @@
-﻿using Zamin.Core.RequestResponse.Queries;
+﻿using Arqom.Core.RequestResponse.Queries;
 
-namespace Zamin.Core.Contracts.ApplicationServices.Queries;
+namespace Arqom.Core.Contracts.ApplicationServices.Queries;
 
 /// <summary>
 /// تعریف ساختار الگوی Mediator جهت اتصال ساده کوئری‌ها به هندلر‌ها

@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
-using Zamin.Core.Contracts.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Queries;
-using Zamin.Extensions.Logger.Abstractions;
+using Arqom.Core.Contracts.ApplicationServices.Queries;
+using Arqom.Core.RequestResponse.Queries;
+using Arqom.Extensions.Logger.Abstractions;
 
-namespace Zamin.Core.ApplicationServices.Queries;
+namespace Arqom.Core.ApplicationServices.Queries;
 
 public class QueryDispatcher : IQueryDispatcher
 {
@@ -42,7 +42,7 @@ public class QueryDispatcher : IQueryDispatcher
         finally
         {
             _stopwatch.Stop();
-            _logger.LogInformation(ZaminEventId.PerformanceMeasurement, "Processing the {QueryType} query tooks {Millisecconds} Millisecconds", query.GetType(), _stopwatch.ElapsedMilliseconds);
+            _logger.LogInformation(ArqomEventId.PerformanceMeasurement, "Processing the {QueryType} query tooks {Millisecconds} Millisecconds", query.GetType(), _stopwatch.ElapsedMilliseconds);
         }
     }
     #endregion

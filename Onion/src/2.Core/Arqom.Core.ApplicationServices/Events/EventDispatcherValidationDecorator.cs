@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Zamin.Extensions.Logger.Abstractions;
+using Arqom.Extensions.Logger.Abstractions;
 
-namespace Zamin.Core.ApplicationServices.Events;
+namespace Arqom.Core.ApplicationServices.Events;
 
 public class EventDispatcherValidationDecorator : EventDispatcherDecorator
 {
@@ -25,17 +25,17 @@ public class EventDispatcherValidationDecorator : EventDispatcherDecorator
     #region Publish Domain Event
     public override async Task PublishDomainEventAsync<TDomainEvent>(TDomainEvent @event)
     {
-        _logger.LogDebug(ZaminEventId.EventValidation, "Validating Event of type {EventType} With value {Event}  start at :{StartDateTime}", @event.GetType(), @event, DateTime.Now);
+        _logger.LogDebug(ArqomEventId.EventValidation, "Validating Event of type {EventType} With value {Event}  start at :{StartDateTime}", @event.GetType(), @event, DateTime.Now);
 
         List<string> errorMessages = Validate(@event);
 
         if (errorMessages.Any())
         {
-            _logger.LogInformation(ZaminEventId.EventValidation, "Validating query of type {QueryType} With value {Query}  failed. Validation errors are: {ValidationErrors}", @event.GetType(), @event, errorMessages);
+            _logger.LogInformation(ArqomEventId.EventValidation, "Validating query of type {QueryType} With value {Query}  failed. Validation errors are: {ValidationErrors}", @event.GetType(), @event, errorMessages);
         }
         else
         {
-            _logger.LogDebug(ZaminEventId.EventValidation, "Validating query of type {QueryType} With value {Query}  finished at :{EndDateTime}", @event.GetType(), @event, DateTime.Now);
+            _logger.LogDebug(ArqomEventId.EventValidation, "Validating query of type {QueryType} With value {Query}  finished at :{EndDateTime}", @event.GetType(), @event, DateTime.Now);
             await _eventDispatcher.PublishDomainEventAsync(@event);
         }
     }
@@ -56,7 +56,7 @@ public class EventDispatcherValidationDecorator : EventDispatcherDecorator
         }
         else
         {
-            _logger.LogInformation(ZaminEventId.CommandValidation, "There is not any validator for {EventType}", @event.GetType());
+            _logger.LogInformation(ArqomEventId.CommandValidation, "There is not any validator for {EventType}", @event.GetType());
         }
 
         return errorMessages;

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Net;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.Logger.Abstractions;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Logger.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
 
-namespace Zamin.EndPoints.Web.Middlewares.ApiExceptionHandler
+namespace Arqom.EndPoints.Web.Middlewares.ApiExceptionHandler
 {
     public class ApiExceptionMiddleware
     {

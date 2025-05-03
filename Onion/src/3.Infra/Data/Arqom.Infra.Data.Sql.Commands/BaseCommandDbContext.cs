@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Globalization;
-using Zamin.Core.Domain.Toolkits.ValueObjects;
-using Zamin.Core.Domain.ValueObjects;
-using Zamin.Infra.Data.Sql.Commands.ValueConversions;
-using Zamin.Infra.Data.Sql.Commands.Extensions;
+using Arqom.Core.Domain.Toolkits.ValueObjects;
+using Arqom.Core.Domain.ValueObjects;
+using Arqom.Infra.Data.Sql.Commands.ValueConversions;
+using Arqom.Infra.Data.Sql.Commands.Extensions;
 
-namespace Zamin.Infra.Data.Sql.Commands;
+namespace Arqom.Infra.Data.Sql.Commands;
 public abstract class BaseCommandDbContext : DbContext
 {
     protected IDbContextTransaction _transaction;

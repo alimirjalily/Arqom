@@ -1,7 +1,7 @@
-﻿using Zamin.Core.Domain.Exceptions;
-using Zamin.Core.Domain.ValueObjects;
+﻿using Arqom.Core.Domain.Exceptions;
+using Arqom.Core.Domain.ValueObjects;
 
-namespace Zamin.Core.Domain.Toolkits.ValueObjects;
+namespace Arqom.Core.Domain.Toolkits.ValueObjects;
 public class Title : BaseValueObject<Title>
 {
     #region Properties

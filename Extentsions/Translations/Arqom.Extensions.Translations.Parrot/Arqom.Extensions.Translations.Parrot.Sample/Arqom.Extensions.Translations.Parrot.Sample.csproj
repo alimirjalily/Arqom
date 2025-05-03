@@ -11,7 +11,7 @@
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.Translations.Parrot\Zamin.Extensions.Translations.Parrot.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.Translations.Parrot\Arqom.Extensions.Translations.Parrot.csproj" />
 		</ItemGroup>
 
 </Project>

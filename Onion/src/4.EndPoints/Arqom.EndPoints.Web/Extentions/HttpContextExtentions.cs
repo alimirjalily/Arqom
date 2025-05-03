@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Zamin.Core.Contracts.ApplicationServices.Events;
-using Zamin.Utilities;
+using Arqom.Core.Contracts.ApplicationServices.Events;
+using Arqom.Utilities;
 
-namespace Zamin.EndPoints.Web.Extensions
+namespace Arqom.EndPoints.Web.Extensions
 {
     public static class HttpContextExtensions
     {
@@ -13,7 +13,7 @@ namespace Zamin.EndPoints.Web.Extensions
             (IQueryDispatcher)httpContext.RequestServices.GetService(typeof(IQueryDispatcher));
         public static IEventDispatcher EventDispatcher(this HttpContext httpContext) =>
             (IEventDispatcher)httpContext.RequestServices.GetService(typeof(IEventDispatcher));
-        public static ZaminServices ZaminApplicationContext(this HttpContext httpContext) =>
-            (ZaminServices)httpContext.RequestServices.GetService(typeof(ZaminServices));
+        public static ArqomServices ArqomApplicationContext(this HttpContext httpContext) =>
+            (ArqomServices)httpContext.RequestServices.GetService(typeof(ArqomServices));
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System.Linq.Expressions;
 using System.Security.Cryptography;
-using Zamin.Core.Domain.Entities;
-using Zamin.Core.Domain.ValueObjects;
+using Arqom.Core.Domain.Entities;
+using Arqom.Core.Domain.ValueObjects;
 
-namespace Zamin.Core.Contracts.Data.Commands;
+namespace Arqom.Core.Contracts.Data.Commands;
 /// <summary>
 /// در صورتی که داده‌ها به صورت عادی ذخیره سازی شوند از این Interface جهت تعیین اعمال اصلی موجود در بخش ذخیره سازی داده‌ها استفاده می‌شود.
 /// </summary>

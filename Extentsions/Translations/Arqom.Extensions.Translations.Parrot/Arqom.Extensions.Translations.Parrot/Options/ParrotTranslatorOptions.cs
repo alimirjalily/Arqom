@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.Translations.Parrot.Options;
+﻿namespace Arqom.Extensions.Translations.Parrot.Options;
 public class ParrotTranslatorOptions
 {
     public string ConnectionString { get; set; } = string.Empty;

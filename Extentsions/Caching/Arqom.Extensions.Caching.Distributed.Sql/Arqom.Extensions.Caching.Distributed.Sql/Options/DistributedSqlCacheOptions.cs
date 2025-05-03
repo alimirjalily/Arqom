@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.Caching.Distributed.Sql.Options;
+﻿namespace Arqom.Extensions.Caching.Distributed.Sql.Options;
 
 public class DistributedSqlCacheOptions
 {

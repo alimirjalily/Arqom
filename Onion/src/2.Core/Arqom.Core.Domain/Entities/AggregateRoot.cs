@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using Zamin.Core.Domain.Events;
+using Arqom.Core.Domain.Events;
 
-namespace Zamin.Core.Domain.Entities;
+namespace Arqom.Core.Domain.Entities;
 /// <summary>
 /// پیاده سازی الگوی AggregateRoot
 /// توضیحات کامل در مورد این الگو را در آدرس زیر می‌توانید مشاهده نمایید

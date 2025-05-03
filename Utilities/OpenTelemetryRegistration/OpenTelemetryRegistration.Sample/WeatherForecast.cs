@@ -1,4 +1,4 @@
-namespace Zamin.Utilities.OpenTelemetryRegistration.Sample
+namespace Arqom.Utilities.OpenTelemetryRegistration.Sample
 {
     public class WeatherForecast
     {

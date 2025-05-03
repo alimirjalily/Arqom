@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Utilities.SerilogRegistration.Sample": {
+    "Arqom.Utilities.SerilogRegistration.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

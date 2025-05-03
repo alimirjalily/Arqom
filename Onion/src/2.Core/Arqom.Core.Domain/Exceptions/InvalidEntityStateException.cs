@@ -1,4 +1,4 @@
-﻿namespace Zamin.Core.Domain.Exceptions;
+﻿namespace Arqom.Core.Domain.Exceptions;
 public class InvalidEntityStateException : DomainStateException
 {
     /// <summary>

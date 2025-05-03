@@ -1,4 +1,4 @@
-namespace Zamin.Extensions.ChangeDataLog.Hamster.Sample
+namespace Arqom.Extensions.ChangeDataLog.Hamster.Sample
 {
     public class WeatherForecast
     {

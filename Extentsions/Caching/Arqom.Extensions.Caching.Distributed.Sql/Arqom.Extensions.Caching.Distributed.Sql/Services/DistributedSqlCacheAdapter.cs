@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
 using System.Text;
-using Zamin.Extensions.Caching.Abstractions;
-using Zamin.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Caching.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
 
-namespace Zamin.Extensions.Caching.Distributed.Sql.Services;
+namespace Arqom.Extensions.Caching.Distributed.Sql.Services;
 
 public class DistributedSqlCacheAdapter : ICacheAdapter
 {

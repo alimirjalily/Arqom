@@ -1,4 +1,4 @@
-﻿using Zamin.Extensions.DependencyInjection;
+﻿using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddZaminAutoMapperProfiles(option =>
+builder.Services.AddArqomAutoMapperProfiles(option =>
 {
-    option.AssmblyNamesForLoadProfiles = "Zamin";
+    option.AssmblyNamesForLoadProfiles = "Arqom";
 });
 
 //Middlewares

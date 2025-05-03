@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Zamin.Extensions.ObjectMappers.AutoMapper.Sample.Models;
+namespace Arqom.Extensions.ObjectMappers.AutoMapper.Sample.Models;
 
 public class PersonStudentAutoMapperProfile : Profile
 {

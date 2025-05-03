@@ -11,7 +11,7 @@
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.ObjectMappers.AutoMapper\Zamin.Extensions.ObjectMappers.AutoMapper.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.ObjectMappers.AutoMapper\Arqom.Extensions.ObjectMappers.AutoMapper.csproj" />
 		</ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.Caching.Abstractions;
+using Arqom.Extensions.Caching.Abstractions;
 
-namespace Zamin.Extensions.Caching.DistributedSqlServerCache.Sample.Controllers
+namespace Arqom.Extensions.Caching.DistributedSqlServerCache.Sample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

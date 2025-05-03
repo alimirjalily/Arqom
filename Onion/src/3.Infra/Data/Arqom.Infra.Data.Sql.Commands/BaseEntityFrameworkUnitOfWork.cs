@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Contracts.Data.Commands;
+﻿using Arqom.Core.Contracts.Data.Commands;
 
-namespace Zamin.Infra.Data.Sql.Commands;
+namespace Arqom.Infra.Data.Sql.Commands;
 public abstract class BaseEntityFrameworkUnitOfWork<TDbContext> : IUnitOfWork
     where TDbContext : BaseCommandDbContext
 {

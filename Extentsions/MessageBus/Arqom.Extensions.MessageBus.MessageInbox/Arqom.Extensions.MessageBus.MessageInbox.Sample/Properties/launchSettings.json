@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.MessageBus.MessageInbox.Sample": {
+    "Arqom.Extensions.MessageBus.MessageInbox.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Zamin.Extensions.Events.Abstractions;
+using Arqom.Extensions.Events.Abstractions;
 
-namespace Zamin.Extensions.Events.Outbox.Dal.EF.Configs;
+namespace Arqom.Extensions.Events.Outbox.Dal.EF.Configs;
 
 public class OutBoxEventItemConfig : IEntityTypeConfiguration<OutBoxEventItem>
 {
@@ -14,7 +14,7 @@ public class OutBoxEventItemConfig : IEntityTypeConfiguration<OutBoxEventItem>
         builder.Property(c => c.AggregateTypeName).HasMaxLength(500);
         builder.Property(c => c.TraceId).HasMaxLength(100);
         builder.Property(c => c.SpanId).HasMaxLength(100);
-        builder.ToTable("OutBoxEventItems","zamin");
+        builder.ToTable("OutBoxEventItems","Arqom");
     }
 }
 

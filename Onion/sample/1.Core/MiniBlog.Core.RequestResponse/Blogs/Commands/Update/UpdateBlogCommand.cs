@@ -1,6 +1,6 @@
 ﻿
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Core.RequestResponse.Endpoints;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Core.RequestResponse.Endpoints;
 
 namespace MiniBlog.Core.RequestResponse.Blogs.Commands.Update;
 

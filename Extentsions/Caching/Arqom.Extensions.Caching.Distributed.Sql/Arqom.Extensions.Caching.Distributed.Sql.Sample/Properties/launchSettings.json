@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.Caching.Distributed.Sql.Sample": {
+    "Arqom.Extensions.Caching.Distributed.Sql.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
-using Zamin.Extensions.Caching.Abstractions;
-using Zamin.Extensions.ObjectMappers.Abstractions;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.Translations.Abstractions;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.Caching.Abstractions;
+using Arqom.Extensions.ObjectMappers.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Utilities;
+namespace Arqom.Utilities;
 
-public class ZaminServices
+public class ArqomServices
 {
     public readonly ITranslator Translator;
     public readonly ICacheAdapter CacheAdapter;
@@ -16,7 +16,7 @@ public class ZaminServices
     public readonly IJsonSerializer Serializer;
     public readonly IUserInfoService UserInfoService;
 
-    public ZaminServices(ITranslator translator,
+    public ArqomServices(ITranslator translator,
             ILoggerFactory loggerFactory,
             IJsonSerializer serializer,
             IUserInfoService userInfoService,

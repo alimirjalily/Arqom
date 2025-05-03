@@ -1,4 +1,4 @@
-﻿using Zamin.Core.ApplicationServices.Events;
+﻿using Arqom.Core.ApplicationServices.Events;
 
 namespace MiniBlog.Endpoints.API.CustomDecorators;
 

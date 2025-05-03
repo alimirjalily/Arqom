@@ -2,10 +2,10 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using System.Data;
-using Zamin.Extensions.Translations.Parrot.DataModel;
-using Zamin.Extensions.Translations.Parrot.Options;
+using Arqom.Extensions.Translations.Parrot.DataModel;
+using Arqom.Extensions.Translations.Parrot.Options;
 
-namespace Zamin.Extensions.Translations.Parrot.Database;
+namespace Arqom.Extensions.Translations.Parrot.Database;
 public class ParrotSqlRepository
 {
     private readonly IDbConnection _dbConnection;

@@ -1,4 +1,4 @@
-﻿namespace Zamin.Core.Domain.ValueObjects;
+﻿namespace Arqom.Core.Domain.ValueObjects;
 /// <summary>
 /// کلاس پایه برای همه ValueObjectها
 /// توضحیات کاملی در مورد دلایل وجود ValueObjectها را در لینک زیر مشاهده می‌کند

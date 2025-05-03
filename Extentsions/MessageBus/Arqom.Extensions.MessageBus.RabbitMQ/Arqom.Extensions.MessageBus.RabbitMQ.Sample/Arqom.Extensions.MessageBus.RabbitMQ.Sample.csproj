@@ -8,11 +8,11 @@
 
 		<ItemGroup>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
-				<PackageReference Include="Zamin.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.MessageBus.RabbitMQ\Zamin.Extensions.MessageBus.RabbitMQ.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.MessageBus.RabbitMQ\Arqom.Extensions.MessageBus.RabbitMQ.csproj" />
 		</ItemGroup>
 
 </Project>

@@ -3,10 +3,10 @@
 	<PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
 		<Version>9.0.0</Version>
-		<Authors>Alireza Oroumand</Authors>
+		<Authors>Ali Mirjalili</Authors>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<RepositoryUrl>https://github.com/oroumand/Zamin</RepositoryUrl>
+		<RepositoryUrl>https://github.com/alimirjalily/Arqom</RepositoryUrl>
 		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
@@ -24,12 +24,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\1.Utilities\Zamin.Utilities\Zamin.Utilities.csproj" />
-		<ProjectReference Include="..\..\2.Core\Zamin.Core.ApplicationServices\Zamin.Core.ApplicationServices.csproj" />
-		<ProjectReference Include="..\..\2.Core\Zamin.Core.Contracts\Zamin.Core.Contracts.csproj" />
-		<ProjectReference Include="..\..\2.Core\Zamin.Core.Domain.Toolkits\Zamin.Core.Domain.Toolkits.csproj" />
-		<ProjectReference Include="..\..\2.Core\Zamin.Core.Domain\Zamin.Core.Domain.csproj" />
-		<ProjectReference Include="..\..\2.Core\Zamin.Core.RequestResponse\Zamin.Core.RequestResponse.csproj" />
+		<ProjectReference Include="..\..\1.Utilities\Arqom.Utilities\Arqom.Utilities.csproj" />
+		<ProjectReference Include="..\..\2.Core\Arqom.Core.ApplicationServices\Arqom.Core.ApplicationServices.csproj" />
+		<ProjectReference Include="..\..\2.Core\Arqom.Core.Contracts\Arqom.Core.Contracts.csproj" />
+		<ProjectReference Include="..\..\2.Core\Arqom.Core.Domain.Toolkits\Arqom.Core.Domain.Toolkits.csproj" />
+		<ProjectReference Include="..\..\2.Core\Arqom.Core.Domain\Arqom.Core.Domain.csproj" />
+		<ProjectReference Include="..\..\2.Core\Arqom.Core.RequestResponse\Arqom.Core.RequestResponse.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -41,13 +41,13 @@
 		<Using Include="Microsoft.Extensions.Logging" />
 		<Using Include="Microsoft.Extensions.DependencyModel" />
 		<Using Include="System.Reflection" />
-		<Using Include="Zamin.Core.Contracts.ApplicationServices.Commands" />
-		<Using Include="Zamin.Core.Contracts.ApplicationServices.Queries" />
-		<Using Include="Zamin.Core.RequestResponse.Common" />
-		<Using Include="Zamin.Core.RequestResponse.Commands" />
-		<Using Include="Zamin.Core.RequestResponse.Queries" />
-		<Using Include="Zamin.Core.Contracts.Data.Commands" />
-		<Using Include="Zamin.Core.Contracts.Data.Queries" />
+		<Using Include="Arqom.Core.Contracts.ApplicationServices.Commands" />
+		<Using Include="Arqom.Core.Contracts.ApplicationServices.Queries" />
+		<Using Include="Arqom.Core.RequestResponse.Common" />
+		<Using Include="Arqom.Core.RequestResponse.Commands" />
+		<Using Include="Arqom.Core.RequestResponse.Queries" />
+		<Using Include="Arqom.Core.Contracts.Data.Commands" />
+		<Using Include="Arqom.Core.Contracts.Data.Queries" />
 	</ItemGroup>
 
 </Project>

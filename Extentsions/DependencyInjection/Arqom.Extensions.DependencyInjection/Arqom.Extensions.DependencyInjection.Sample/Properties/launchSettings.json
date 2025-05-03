@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.DependencyInjection.Sample": {
+    "Arqom.Extensions.DependencyInjection.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

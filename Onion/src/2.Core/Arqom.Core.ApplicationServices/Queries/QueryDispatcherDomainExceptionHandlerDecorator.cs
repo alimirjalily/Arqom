@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Zamin.Core.Domain.Exceptions;
-using Zamin.Core.RequestResponse.Common;
-using Zamin.Core.RequestResponse.Queries;
-using Zamin.Extensions.Logger.Abstractions;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Core.Domain.Exceptions;
+using Arqom.Core.RequestResponse.Common;
+using Arqom.Core.RequestResponse.Queries;
+using Arqom.Extensions.Logger.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
 
-namespace Zamin.Core.ApplicationServices.Queries;
+namespace Arqom.Core.ApplicationServices.Queries;
 
 public class QueryDispatcherDomainExceptionHandlerDecorator : QueryDispatcherDecorator
 {
@@ -36,14 +36,14 @@ public class QueryDispatcherDomainExceptionHandlerDecorator : QueryDispatcherDec
         }
         catch (DomainStateException ex)
         {
-            _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {QueryType} With value {Query} failed at {StartDateTime} because there are domain exceptions.", query.GetType(), query, DateTime.Now);
+            _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {QueryType} With value {Query} failed at {StartDateTime} because there are domain exceptions.", query.GetType(), query, DateTime.Now);
             return DomainExceptionHandlingWithReturnValue<TQuery, TData>(ex);
         }
         catch (AggregateException ex)
         {
             if (ex.InnerException is DomainStateException domainStateException)
             {
-                _logger.LogError(ZaminEventId.DomainValidationException, ex, "Processing of {QueryType} With value {Query} failed at {StartDateTime} because there are domain exceptions.", query.GetType(), query, DateTime.Now);
+                _logger.LogError(ArqomEventId.DomainValidationException, ex, "Processing of {QueryType} With value {Query} failed at {StartDateTime} because there are domain exceptions.", query.GetType(), query, DateTime.Now);
                 return DomainExceptionHandlingWithReturnValue<TQuery, TData>(domainStateException);
             }
             throw ex;
@@ -74,7 +74,7 @@ public class QueryDispatcherDomainExceptionHandlerDecorator : QueryDispatcherDec
              translator[domainStateException.Message, domainStateException.Parameters] :
                translator[domainStateException?.Message];
 
-        _logger.LogInformation(ZaminEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
+        _logger.LogInformation(ArqomEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
 
         return result;
     }

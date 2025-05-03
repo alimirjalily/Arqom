@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zamin.Utilities.Extensions
+namespace Arqom.Utilities.Extensions
 {
     public static class TypeExtentsions
     {

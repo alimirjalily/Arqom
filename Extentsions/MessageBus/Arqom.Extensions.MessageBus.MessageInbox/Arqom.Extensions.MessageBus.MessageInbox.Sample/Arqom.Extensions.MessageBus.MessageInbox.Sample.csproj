@@ -8,13 +8,13 @@
 
 		<ItemGroup>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
-				<PackageReference Include="Zamin.Extensions.MessageBus.RabbitMQ" Version="8.0.1-beta.1" />
-				<PackageReference Include="Zamin.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.RabbitMQ" Version="9.0.0-beta.1" />
+				<PackageReference Include="Arqom.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.MessageBus.MessageInbox.Dal.Dapper\Zamin.Extensions.MessageBus.MessageInbox.Dal.Dapper.csproj" />
-				<ProjectReference Include="..\Zamin.Extensions.MessageBus.MessageInbox\Zamin.Extensions.MessageBus.MessageInbox.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper\Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.MessageBus.MessageInbox\Arqom.Extensions.MessageBus.MessageInbox.csproj" />
 		</ItemGroup>
 
 </Project>

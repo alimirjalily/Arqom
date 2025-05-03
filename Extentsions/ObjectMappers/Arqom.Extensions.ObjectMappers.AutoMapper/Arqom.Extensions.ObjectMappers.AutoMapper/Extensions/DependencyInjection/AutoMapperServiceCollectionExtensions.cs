@@ -2,19 +2,19 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyModel;
 using System.Reflection;
-using Zamin.Extensions.ObjectMappers.AutoMapper.Options;
-using Zamin.Extensions.ObjectMappers.AutoMapper.Services;
-using Zamin.Extensions.ObjectMappers.Abstractions;
+using Arqom.Extensions.ObjectMappers.AutoMapper.Options;
+using Arqom.Extensions.ObjectMappers.AutoMapper.Services;
+using Arqom.Extensions.ObjectMappers.Abstractions;
 using AutoMapper;
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 public static class AutoMapperServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminAutoMapperProfiles(this IServiceCollection services,
+    public static IServiceCollection AddArqomAutoMapperProfiles(this IServiceCollection services,
                                                           IConfiguration configuration,
                                                           string sectionName)
-        => services.AddZaminAutoMapperProfiles(configuration.GetSection(sectionName));
+        => services.AddArqomAutoMapperProfiles(configuration.GetSection(sectionName));
 
-    public static IServiceCollection AddZaminAutoMapperProfiles(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomAutoMapperProfiles(this IServiceCollection services, IConfiguration configuration)
     {
         var option = configuration.Get<AutoMapperOption>();
 
@@ -23,7 +23,7 @@ public static class AutoMapperServiceCollectionExtensions
         return services.AddAutoMapper(assemblies).AddSingleton<IMapperAdapter, AutoMapperAdapter>();
     }
 
-    public static IServiceCollection AddZaminAutoMapperProfiles(this IServiceCollection services, Action<AutoMapperOption> setupAction)
+    public static IServiceCollection AddArqomAutoMapperProfiles(this IServiceCollection services, Action<AutoMapperOption> setupAction)
     {
         var option = new AutoMapperOption();
         setupAction.Invoke(option);

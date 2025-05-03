@@ -1,4 +1,4 @@
-﻿using Zamin.Extensions.DependencyInjection.Extensions.DependencyInjection;
+﻿using Arqom.Extensions.DependencyInjection.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCustomeDepenecies(option =>
 {
-    option.AssmblyNamesForLoad = "Zamin";
+    option.AssmblyNamesForLoad = "Arqom";
 });
 
 //Middlewares

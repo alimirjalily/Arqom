@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.UsersManagement.Options;
-using Zamin.Extensions.UsersManagement.Services;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.UsersManagement.Options;
+using Arqom.Extensions.UsersManagement.Services;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class UserInfoServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminWebUserInfoService(this IServiceCollection services, IConfiguration configuration, bool useFake = false)
+    public static IServiceCollection AddArqomWebUserInfoService(this IServiceCollection services, IConfiguration configuration, bool useFake = false)
     {
         if (useFake)
         {
@@ -25,13 +25,13 @@ public static class UserInfoServiceCollectionExtensions
     }
 
 
-    public static IServiceCollection AddZaminWebUserInfoService(this IServiceCollection services, IConfiguration configuration, string sectionName, bool useFake = false)
+    public static IServiceCollection AddArqomWebUserInfoService(this IServiceCollection services, IConfiguration configuration, string sectionName, bool useFake = false)
     {
-        services.AddZaminWebUserInfoService(configuration.GetSection(sectionName), useFake);
+        services.AddArqomWebUserInfoService(configuration.GetSection(sectionName), useFake);
         return services;
     }
 
-    public static IServiceCollection AddZaminWebUserInfoService(this IServiceCollection services, Action<UserManagementOptions> setupAction, bool useFake = false)
+    public static IServiceCollection AddArqomWebUserInfoService(this IServiceCollection services, Action<UserManagementOptions> setupAction, bool useFake = false)
     {
         if (useFake)
         {

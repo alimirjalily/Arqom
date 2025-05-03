@@ -1,6 +1,6 @@
-﻿using Zamin.Core.ApplicationServices.Queries;
-using Zamin.Core.Contracts.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Queries;
+﻿using Arqom.Core.ApplicationServices.Queries;
+using Arqom.Core.Contracts.ApplicationServices.Queries;
+using Arqom.Core.RequestResponse.Queries;
 
 namespace MiniBlog.Endpoints.API.CustomDecorators;
 

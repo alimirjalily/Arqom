@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.MessageBus.RabbitMQ.Sample": {
+    "Arqom.Extensions.MessageBus.RabbitMQ.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

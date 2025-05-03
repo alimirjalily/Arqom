@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.Resources.Translators;
+﻿namespace Arqom.Utilities.Resources.Translators;
 
 public class TranslatorValues
 {

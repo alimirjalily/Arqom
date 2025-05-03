@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Zamin.Utilities.Extensions;
+namespace Arqom.Utilities.Extensions;
 
 public static class StringValidatorExtensions
 {

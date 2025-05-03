@@ -1,8 +1,8 @@
 ﻿using System.Data;
 using System.Data.Common;
-using Zamin.Utilities.Extensions;
+using Arqom.Utilities.Extensions;
 
-namespace Zamin.Infra.Data.Sql.Commands.Extensions;
+namespace Arqom.Infra.Data.Sql.Commands.Extensions;
 
 public static class DbCommandExtension
 {

@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.UsersManagement.Sample.Api.Models;
+﻿namespace Arqom.Extensions.UsersManagement.Sample.Api.Models;
 
 public class WeatherForecast
 {

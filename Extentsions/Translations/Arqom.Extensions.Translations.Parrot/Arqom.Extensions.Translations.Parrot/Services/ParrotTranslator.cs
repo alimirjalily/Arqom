@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Globalization;
-using Zamin.Extensions.Translations.Parrot.Database;
-using Zamin.Extensions.Translations.Parrot.Options;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Extensions.Translations.Parrot.Database;
+using Arqom.Extensions.Translations.Parrot.Options;
+using Arqom.Extensions.Translations.Abstractions;
 
-namespace Zamin.Extensions.Translations.Parrot.Services;
+namespace Arqom.Extensions.Translations.Parrot.Services;
 public class ParrotTranslator : ITranslator, IDisposable
 {
     private readonly string _currentCulture;

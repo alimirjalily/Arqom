@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.Translations.Parrot.Sample": {
+    "Arqom.Extensions.Translations.Parrot.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

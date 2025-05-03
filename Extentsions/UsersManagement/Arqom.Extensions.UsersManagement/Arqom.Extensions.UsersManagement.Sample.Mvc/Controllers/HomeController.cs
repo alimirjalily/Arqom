@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Text.Json;
-using Zamin.Extensions.UsersManagement.Abstractions;
-using Zamin.Extensions.UsersManagement.Sample.Mvc.Models;
+using Arqom.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.UsersManagement.Sample.Mvc.Models;
 
-namespace Zamin.Extensions.UsersManagement.Sample.Mvc.Controllers;
+namespace Arqom.Extensions.UsersManagement.Sample.Mvc.Controllers;
 
 [Authorize]
 public class HomeController : Controller

@@ -3,10 +3,10 @@
 		<PropertyGroup>
 				<TargetFramework>net9.0</TargetFramework>
 				<Version>9.0.0</Version>
-				<Authors>Alireza Oroumand</Authors>
+				<Authors>Ali Mirjalili</Authors>
 				<ImplicitUsings>enable</ImplicitUsings>
 				<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-				<RepositoryUrl>https://github.com/oroumand/Zamin</RepositoryUrl>
+				<RepositoryUrl>https://github.com/alimirjalily/Arqom</RepositoryUrl>
 				<PackageIcon>icon.png</PackageIcon>
 		</PropertyGroup>
 
@@ -16,8 +16,8 @@
 
 		<ItemGroup>
 				<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.ChangeDataLog.Abstractions" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.UsersManagement.Abstractions" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.ChangeDataLog.Abstractions" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.UsersManagement.Abstractions" Version="9.0.0" />
 		</ItemGroup>
 		
 		<ItemGroup>
@@ -25,9 +25,9 @@
 		</ItemGroup>
 		
 		<ItemGroup>
-				<ProjectReference Include="..\..\..\2.Core\Zamin.Core.Contracts\Zamin.Core.Contracts.csproj" />
-				<ProjectReference Include="..\..\..\2.Core\Zamin.Core.Domain.Toolkits\Zamin.Core.Domain.Toolkits.csproj" />
-				<ProjectReference Include="..\..\..\2.Core\Zamin.Core.Domain\Zamin.Core.Domain.csproj" />
+				<ProjectReference Include="..\..\..\2.Core\Arqom.Core.Contracts\Arqom.Core.Contracts.csproj" />
+				<ProjectReference Include="..\..\..\2.Core\Arqom.Core.Domain.Toolkits\Arqom.Core.Domain.Toolkits.csproj" />
+				<ProjectReference Include="..\..\..\2.Core\Arqom.Core.Domain\Arqom.Core.Domain.csproj" />
 		</ItemGroup>
 
 </Project>

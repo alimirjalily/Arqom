@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.UsersManagement.Abstractions;
-using Zamin.Extensions.UsersManagement.Sample.Api.Models;
+using Arqom.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.UsersManagement.Sample.Api.Models;
 
-namespace Zamin.Extensions.UsersManagement.Sample.Api.Controllers;
+namespace Arqom.Extensions.UsersManagement.Sample.Api.Controllers;
 
 [ApiController]
 [Authorize]

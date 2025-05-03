@@ -1,8 +1,8 @@
 ﻿using System.Data;
 using System.Reflection;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
 
-namespace Zamin.Extensions.Serializers.EPPlus.Extensions;
+namespace Arqom.Extensions.Serializers.EPPlus.Extensions;
 
 public static class LinqExtensions
 {

@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\2.Core\Zamin.Core.Domain.Toolkits\Zamin.Core.Domain.Toolkits.csproj" />
-    <ProjectReference Include="..\..\..\src\2.Core\Zamin.Core.Domain\Zamin.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\..\src\2.Core\Arqom.Core.Domain.Toolkits\Arqom.Core.Domain.Toolkits.csproj" />
+    <ProjectReference Include="..\..\..\src\2.Core\Arqom.Core.Domain\Arqom.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>

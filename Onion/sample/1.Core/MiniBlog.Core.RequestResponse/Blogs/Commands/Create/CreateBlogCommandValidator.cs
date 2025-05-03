@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Zamin.Extensions.Translations.Abstractions;
+using Arqom.Extensions.Translations.Abstractions;
 
 namespace MiniBlog.Core.RequestResponse.Blogs.Commands.Create
 {

@@ -12,7 +12,7 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "zamin");
+                name: "Arqom");
 
             migrationBuilder.CreateTable(
                 name: "Blogs",
@@ -35,7 +35,7 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
 
             migrationBuilder.CreateTable(
                 name: "OutBoxEventItems",
-                schema: "zamin",
+                schema: "Arqom",
                 columns: table => new
                 {
                     OutBoxEventItemId = table.Column<long>(type: "bigint", nullable: false)
@@ -116,7 +116,7 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
 
             migrationBuilder.DropTable(
                 name: "OutBoxEventItems",
-                schema: "zamin");
+                schema: "Arqom");
 
             migrationBuilder.DropTable(
                 name: "People");

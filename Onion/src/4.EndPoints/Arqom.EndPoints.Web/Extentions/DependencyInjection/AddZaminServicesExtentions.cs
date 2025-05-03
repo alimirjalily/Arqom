@@ -1,12 +1,12 @@
-﻿using Zamin.Utilities;
+﻿using Arqom.Utilities;
 
-namespace Zamin.Extensions.DependencyInjection;
-public static class AddZaminServicesExtensions
+namespace Arqom.Extensions.DependencyInjection;
+public static class AddArqomServicesExtensions
 {
-    public static IServiceCollection AddZaminUntilityServices(
+    public static IServiceCollection AddArqomUntilityServices(
         this IServiceCollection services)
     {
-        services.AddTransient<ZaminServices>();
+        services.AddTransient<ArqomServices>();
         return services;
     }
 }

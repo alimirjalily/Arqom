@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Zamin.Infra.Data.Sql.Commands.Extensions;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Infra.Data.Sql.Commands.Extensions;
+using Arqom.Extensions.UsersManagement.Abstractions;
 
-namespace Zamin.Infra.Data.Sql.Commands.Interceptors;
+namespace Arqom.Infra.Data.Sql.Commands.Interceptors;
 
 public class AddAuditDataInterceptor : SaveChangesInterceptor
 {

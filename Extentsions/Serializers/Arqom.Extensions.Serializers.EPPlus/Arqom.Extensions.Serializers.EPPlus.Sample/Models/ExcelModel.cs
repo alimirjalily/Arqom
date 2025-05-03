@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.Serializers.EPPlus.Sample.Models;
+﻿namespace Arqom.Extensions.Serializers.EPPlus.Sample.Models;
 
 public class ExcelModel
 {

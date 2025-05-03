@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Zamin.Core.Domain.Entities;
+using Arqom.Core.Domain.Entities;
 
-namespace Zamin.Infra.Data.Sql.Commands.Extensions;
+namespace Arqom.Infra.Data.Sql.Commands.Extensions;
 public static class ChangeTrackerExtensions
 {
     public static List<AggregateRoot> GetChangedAggregates(this ChangeTracker changeTracker) =>

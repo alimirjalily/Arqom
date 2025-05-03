@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zamin.Utilities.SerilogRegistration.Extensions;
+namespace Arqom.Utilities.SerilogRegistration.Extensions;
 public class SerilogExtensions
 {
     public static void RunWithSerilogExceptionHandling(Action action,string startUpMessage= "Starting up",string exceptionMessage= "Unhandled exception", string shutdownMessage= "Shutdown complete")

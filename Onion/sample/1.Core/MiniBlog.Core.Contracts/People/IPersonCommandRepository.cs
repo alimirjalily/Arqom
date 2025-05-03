@@ -1,5 +1,5 @@
 ﻿using MiniBlog.Core.Domain.People.Entities;
-using Zamin.Core.Contracts.Data.Commands;
+using Arqom.Core.Contracts.Data.Commands;
 
 namespace MiniBlog.Core.Contracts.People;
 

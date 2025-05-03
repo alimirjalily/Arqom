@@ -1,6 +1,6 @@
-﻿using Zamin.Core.RequestResponse.Commands;
+﻿using Arqom.Core.RequestResponse.Commands;
 
-namespace Zamin.Core.Contracts.ApplicationServices.Commands;
+namespace Arqom.Core.Contracts.ApplicationServices.Commands;
 
 public interface ICommandHandler<TCommand, TData> where TCommand : ICommand<TData>
 {

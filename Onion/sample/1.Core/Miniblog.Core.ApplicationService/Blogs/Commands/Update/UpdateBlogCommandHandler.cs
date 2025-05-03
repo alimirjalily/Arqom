@@ -1,9 +1,9 @@
 ﻿using MiniBlog.Core.Contracts.Blogs.Commands;
 using MiniBlog.Core.RequestResponse.Blogs.Commands.Update;
-using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.Domain.Exceptions;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Utilities;
+using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.Domain.Exceptions;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Utilities;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Commands.Update;
 
@@ -11,8 +11,8 @@ public sealed class UpdateBlogCommandHandler : CommandHandler<UpdateBlogCommand>
 {
     private readonly IBlogCommandRepository _blogCommandRepository;
 
-    public UpdateBlogCommandHandler(ZaminServices zaminServices,
-                                    IBlogCommandRepository blogCommandRepository) : base(zaminServices)
+    public UpdateBlogCommandHandler(ArqomServices ArqomServices,
+                                    IBlogCommandRepository blogCommandRepository) : base(ArqomServices)
     {
         _blogCommandRepository = blogCommandRepository;
     }

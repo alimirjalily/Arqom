@@ -2,16 +2,16 @@
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client.Events;
 using RabbitMQ.Client;
-using Zamin.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.Abstractions;
 using Microsoft.Extensions.Options;
-using Zamin.Extensions.MessageBus.RabbitMQ.Options;
+using Arqom.Extensions.MessageBus.RabbitMQ.Options;
 using Microsoft.Extensions.Configuration;
 using System.Runtime.InteropServices;
-using Zamin.Extensions.MessageBus.RabbitMQ.Extensions;
+using Arqom.Extensions.MessageBus.RabbitMQ.Extensions;
 using System.Diagnostics;
 using System;
 
-namespace Zamin.Extensions.MessageBus.RabbitMQ;
+namespace Arqom.Extensions.MessageBus.RabbitMQ;
 public class RabbitMqReceiveMessageBus : IReceiveMessageBus, IDisposable
 {
     private readonly ILogger<RabbitMqReceiveMessageBus> _logger;

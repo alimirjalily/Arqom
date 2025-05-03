@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.DateTimes;
+﻿namespace Arqom.Utilities.DateTimes;
 /// <summary>
 /// اجزای روز شمسی
 /// </summary>

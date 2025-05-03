@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Zamin.Utilities.Guards.GuardClauses;
+namespace Arqom.Utilities.Guards.GuardClauses;
 
 public static class MaximumLengthGuardClause
 {

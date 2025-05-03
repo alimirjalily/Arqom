@@ -1,11 +1,11 @@
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Utilities.SerilogRegistration.Extensions;
-using Zamin.Utilities.SerilogRegistration.Sample;
-using Zamin.Utilities.SerilogRegistration.Sample.SampleEnrichers;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Utilities.SerilogRegistration.Extensions;
+using Arqom.Utilities.SerilogRegistration.Sample;
+using Arqom.Utilities.SerilogRegistration.Sample.SampleEnrichers;
 SerilogExtensions.RunWithSerilogExceptionHandling(() =>
 {
     var builder = WebApplication.CreateBuilder(args);
-    var app = builder.AddZaminSerilog(c =>
+    var app = builder.AddArqomSerilog(c =>
     {
         c.ApplicationName = "SerilogRegistration";
         c.ServiceName = "SampleService";

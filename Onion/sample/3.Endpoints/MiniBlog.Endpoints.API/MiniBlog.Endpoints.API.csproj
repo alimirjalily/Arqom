@@ -22,23 +22,23 @@
 				</PackageReference>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
 				<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
-				<PackageReference Include="Zamin.Extensions.Caching.InMemory" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.Events.PollingPublisher" Version="8.0.0" />
-				<PackageReference Include="Zamin.Extensions.Events.PollingPublisher.Dal.Dapper" Version="8.0.0" />
-				<PackageReference Include="Zamin.Extensions.MessageBus.MessageInbox" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.MessageBus.MessageInbox.Dal.Dapper" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.MessageBus.RabbitMQ" Version="8.0.1-beta.1" />
-				<PackageReference Include="Zamin.Extensions.ObjectMappers.AutoMapper" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.Serializers.Microsoft" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.Translations.Parrot" Version="9.0.0" />
-				<PackageReference Include="Zamin.Extensions.UsersManagement" Version="9.0.0" />
-				<PackageReference Include="Zamin.Utilities.OpenTelemetryRegistration" Version="8.0.0-beta.2" />
-				<PackageReference Include="Zamin.Utilities.SerilogRegistration" Version="8.0.0" />
+				<PackageReference Include="Arqom.Extensions.Caching.InMemory" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Events.PollingPublisher" Version="9.0.0-beta.1" />
+				<PackageReference Include="Arqom.Extensions.Events.PollingPublisher.Dal.Dapper" Version="9.0.0-beta.1" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.MessageInbox" Version="9.0.0-beta.1" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper" Version="9.0.0-beta.1" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.RabbitMQ" Version="8.0.1-beta.1" />
+				<PackageReference Include="Arqom.Extensions.ObjectMappers.AutoMapper" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Serializers.Microsoft" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Translations.Parrot" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.UsersManagement" Version="9.0.0" />
+				<PackageReference Include="Arqom.Utilities.OpenTelemetryRegistration" Version="8.0.0-beta.2" />
+				<PackageReference Include="Arqom.Utilities.SerilogRegistration" Version="8.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\..\..\src\4.EndPoints\Zamin.EndPoints.Web\Zamin.EndPoints.Web.csproj" />
+				<ProjectReference Include="..\..\..\src\4.EndPoints\Arqom.EndPoints.Web\Arqom.EndPoints.Web.csproj" />
 				<ProjectReference Include="..\..\1.Core\Miniblog.Core.ApplicationService\MiniBlog.Core.ApplicationService.csproj" />
 				<ProjectReference Include="..\..\1.Core\MiniBlog.Core.Contracts\MiniBlog.Core.Contracts.csproj" />
 				<ProjectReference Include="..\..\1.Core\MiniBlog.Core.Domain\MiniBlog.Core.Domain.csproj" />

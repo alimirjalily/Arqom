@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Zamin.Utilities.Extensions;
+namespace Arqom.Utilities.Extensions;
 
 public static class ObjectExtensions
 {

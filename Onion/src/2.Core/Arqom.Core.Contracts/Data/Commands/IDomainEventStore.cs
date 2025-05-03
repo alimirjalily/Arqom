@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Domain.Events;
+﻿using Arqom.Core.Domain.Events;
 
-namespace Zamin.Core.Contracts.Data.Commands;
+namespace Arqom.Core.Contracts.Data.Commands;
 /// <summary>
 /// در صورت نیاز به ذخیره و بازیابی eventها از این اینترفیس استفاده می‌شود.
 /// </summary>

@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Contracts.Data.Queries;
+﻿using Arqom.Core.Contracts.Data.Queries;
 
-namespace Zamin.Infra.Data.Sql.Queries;
+namespace Arqom.Infra.Data.Sql.Queries;
 public class BaseQueryRepository<TDbContext> : IQueryRepository
     where TDbContext : BaseQueryDbContext
 {

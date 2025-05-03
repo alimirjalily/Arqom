@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Utilities.OpenTelemetryRegistration.Monitoring;
-using Zamin.Utilities.OpenTelemetryRegistration.Sample.Models;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Utilities.OpenTelemetryRegistration.Monitoring;
+using Arqom.Utilities.OpenTelemetryRegistration.Sample.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PersonContext>(c => c.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-builder.Services.AddZaminObservabilitySupport(c =>
+builder.Services.AddArqomObservabilitySupport(c =>
 {
-    c.ApplicationName = "Zamin";
+    c.ApplicationName = "Arqom";
     c.ServiceName = "OpenTelemetrySample";
     c.ServiceVersion = "1.0.0";
     c.ServiceId = "cb387bb6-9a66-444f-92b2-ff64e2a81f98";
@@ -25,7 +25,7 @@ builder.Services.AddZaminObservabilitySupport(c =>
 var app = builder.Build();
 
 
-app.UseZaminObservabilityMiddlewares();
+app.UseArqomObservabilityMiddlewares();
 
 
 // Configure the HTTP request pipeline.

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zamin.Utilities.OpenTelemetryRegistration.Monitoring;
+namespace Arqom.Utilities.OpenTelemetryRegistration.Monitoring;
 public class ResponseMetricMiddleware(RequestDelegate request)
 {
     private readonly RequestDelegate _request = request ?? throw new ArgumentNullException(nameof(request));

@@ -6,7 +6,7 @@ using MiniBlog.Core.RequestResponse.Blogs.Commands.DeleteGraph;
 using MiniBlog.Core.RequestResponse.Blogs.Commands.RemovePost;
 using MiniBlog.Core.RequestResponse.Blogs.Commands.Update;
 using MiniBlog.Core.RequestResponse.Blogs.Queries.GetById;
-using Zamin.EndPoints.Web.Controllers;
+using Arqom.EndPoints.Web.Controllers;
 
 namespace MiniBlog.Endpoints.API.Blogs
 {

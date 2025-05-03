@@ -3,11 +3,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
-using Zamin.Extensions.Events.Abstractions;
-using Zamin.Extensions.Events.PollingPublisher.Options;
-using Zamin.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.Events.Abstractions;
+using Arqom.Extensions.Events.PollingPublisher.Options;
+using Arqom.Extensions.MessageBus.Abstractions;
 
-namespace Zamin.Extensions.Events.PollingPublisher
+namespace Arqom.Extensions.Events.PollingPublisher
 {
     public class PoolingPublisherBackgroundService : BackgroundService
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using Zamin.Extensions.Caching.Abstractions;
-using Zamin.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Caching.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
 
-namespace Zamin.Extensions.Caching.InMemory.Services;
+namespace Arqom.Extensions.Caching.InMemory.Services;
 
 public class InMemoryCacheAdapter : ICacheAdapter
 {

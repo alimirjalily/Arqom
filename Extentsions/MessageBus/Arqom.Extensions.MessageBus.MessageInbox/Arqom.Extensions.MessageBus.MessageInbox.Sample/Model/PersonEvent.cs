@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Domain.Events;
+﻿using Arqom.Core.Domain.Events;
 
-namespace Zamin.Extensions.MessageBus.MessageInbox.Sample.Model;
+namespace Arqom.Extensions.MessageBus.MessageInbox.Sample.Model;
 public class PersonEvent : IDomainEvent
 {
     public string FirstName { get; set; }

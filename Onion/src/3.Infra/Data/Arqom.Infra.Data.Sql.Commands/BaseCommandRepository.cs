@@ -1,10 +1,10 @@
 ﻿using System.Linq.Expressions;
-using Zamin.Core.Domain.Entities;
-using Zamin.Core.Domain.ValueObjects;
-using Zamin.Core.Contracts.Data.Commands;
+using Arqom.Core.Domain.Entities;
+using Arqom.Core.Domain.ValueObjects;
+using Arqom.Core.Contracts.Data.Commands;
 using System.Security.Cryptography;
 
-namespace Zamin.Infra.Data.Sql.Commands;
+namespace Arqom.Infra.Data.Sql.Commands;
 public class BaseCommandRepository<TEntity, TDbContext, TId> : ICommandRepository<TEntity, TId>, IUnitOfWork
     where TEntity : AggregateRoot<TId>
     where TDbContext : BaseCommandDbContext

@@ -1,10 +1,10 @@
-﻿namespace Zamin.Extensions.DependencyInjection;
+﻿namespace Arqom.Extensions.DependencyInjection;
 /// <summary>
 /// توابع کمکی جهت ثبت نیازمندی‌های لایه داده
 /// </summary>
 public static class AddDataAccessExtentsions
 {
-    public static IServiceCollection AddZaminDataAccess(
+    public static IServiceCollection AddArqomDataAccess(
         this IServiceCollection services,
         IEnumerable<Assembly> assembliesForSearch) =>
         services.AddRepositories(assembliesForSearch).AddUnitOfWorks(assembliesForSearch);

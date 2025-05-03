@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.ObjectMappers.AutoMapper.Sample.Models;
-using Zamin.Extensions.ObjectMappers.Abstractions;
+using Arqom.Extensions.ObjectMappers.AutoMapper.Sample.Models;
+using Arqom.Extensions.ObjectMappers.Abstractions;
 
-namespace Zamin.Extensions.ObjectMappers.AutoMapper.Sample.Controllers
+namespace Arqom.Extensions.ObjectMappers.AutoMapper.Sample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

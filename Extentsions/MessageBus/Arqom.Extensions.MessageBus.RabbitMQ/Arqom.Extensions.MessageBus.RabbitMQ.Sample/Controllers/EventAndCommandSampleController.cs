@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.MessageBus.RabbitMQ.Sample.Models;
-using Zamin.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.RabbitMQ.Sample.Models;
+using Arqom.Extensions.MessageBus.Abstractions;
 
-namespace Zamin.Extensions.MessageBus.RabbitMQ.Sample.Controllers
+namespace Arqom.Extensions.MessageBus.RabbitMQ.Sample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

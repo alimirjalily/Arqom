@@ -14,13 +14,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
-    <PackageReference Include="Zamin.Extensions.UsersManagement" Version="9.0.0" />
-    <PackageReference Include="Zamin.Extensions.UsersManagement.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Arqom.Extensions.UsersManagement" Version="9.0.0" />
+    <PackageReference Include="Arqom.Extensions.UsersManagement.Abstractions" Version="9.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Zamin.Extensions.ChangeDataLog.Hamster\Zamin.Extensions.ChangeDataLog.Hamster.csproj" />
-    <ProjectReference Include="..\Zamin.Extensions.ChangeDataLog.Sql\Zamin.Extensions.ChangeDataLog.Sql.csproj" />
+    <ProjectReference Include="..\Arqom.Extensions.ChangeDataLog.Hamster\Arqom.Extensions.ChangeDataLog.Hamster.csproj" />
+    <ProjectReference Include="..\Arqom.Extensions.ChangeDataLog.Sql\Arqom.Extensions.ChangeDataLog.Sql.csproj" />
   </ItemGroup>
 
 </Project>

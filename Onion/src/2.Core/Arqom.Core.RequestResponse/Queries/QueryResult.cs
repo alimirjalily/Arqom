@@ -1,6 +1,6 @@
-﻿using Zamin.Core.RequestResponse.Common;
+﻿using Arqom.Core.RequestResponse.Common;
 
-namespace Zamin.Core.RequestResponse.Queries;
+namespace Arqom.Core.RequestResponse.Queries;
 
 /// <summary>
 /// نتیجه یک کوئری را بازگشت می‌دهد

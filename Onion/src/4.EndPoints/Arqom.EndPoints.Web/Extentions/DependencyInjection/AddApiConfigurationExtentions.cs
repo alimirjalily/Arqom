@@ -1,20 +1,20 @@
 ﻿using FluentValidation.AspNetCore;
 using System.Data.SqlClient;
-using Zamin.EndPoints.Web.Middlewares.ApiExceptionHandler;
+using Arqom.EndPoints.Web.Middlewares.ApiExceptionHandler;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class AddApiConfigurationExtensions
 {
-    public static IServiceCollection AddZaminApiCore(this IServiceCollection services, params string[] assemblyNamesForLoad)
+    public static IServiceCollection AddArqomApiCore(this IServiceCollection services, params string[] assemblyNamesForLoad)
     {
         services.AddControllers().AddFluentValidation();
-        services.AddZaminDependencies(assemblyNamesForLoad);
+        services.AddArqomDependencies(assemblyNamesForLoad);
 
         return services;
     }
 
-    public static void UseZaminApiExceptionHandler(this IApplicationBuilder app)
+    public static void UseArqomApiExceptionHandler(this IApplicationBuilder app)
     {
         
         app.UseApiExceptionHandler(options =>

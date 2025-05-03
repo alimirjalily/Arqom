@@ -1,6 +1,6 @@
-﻿using Zamin.Extensions.DependencyInjection.Abstractions;
+﻿using Arqom.Extensions.DependencyInjection.Abstractions;
 
-namespace Zamin.Extensions.DependencyInjection.Sample.Services;
+namespace Arqom.Extensions.DependencyInjection.Sample.Services;
 
 public interface IGetGuidScopeService : IScopeLifetime
 {

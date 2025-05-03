@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Zamin.Infra.Data.Sql.Queries;
+namespace Arqom.Infra.Data.Sql.Queries;
 public abstract class BaseQueryDbContext : DbContext
     {
         public BaseQueryDbContext(DbContextOptions options) : base(options)

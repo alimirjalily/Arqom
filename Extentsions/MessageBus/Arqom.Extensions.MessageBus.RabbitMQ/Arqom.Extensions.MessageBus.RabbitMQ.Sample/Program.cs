@@ -1,13 +1,13 @@
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Extensions.MessageBus.Abstractions;
-using Zamin.Extensions.MessageBus.Abstractions.Fakes;
-using Zamin.Extensions.MessageBus.RabbitMQ;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.Abstractions.Fakes;
+using Arqom.Extensions.MessageBus.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddZaminNewtonSoftSerializer();
-builder.Services.AddZaminRabbitMqMessageBus(c =>
+builder.Services.AddArqomNewtonSoftSerializer();
+builder.Services.AddArqomRabbitMqMessageBus(c =>
 {
     c.PerssistMessage = true;
     c.ExchangeName = "SampleExchange";

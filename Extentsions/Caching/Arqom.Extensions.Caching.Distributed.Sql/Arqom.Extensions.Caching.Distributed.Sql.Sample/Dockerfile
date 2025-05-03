@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Zamin.Extensions.Caching.Distributed.Sql.Sample/Zamin.Extensions.Caching.Distributed.Sql.Sample.csproj", "Zamin.Extensions.Caching.Distributed.Sql.Sample/"]
-RUN dotnet restore "Zamin.Extensions.Caching.Distributed.Sql.Sample/Zamin.Extensions.Caching.Distributed.Sql.Sample.csproj"
+COPY ["Arqom.Extensions.Caching.Distributed.Sql.Sample/Arqom.Extensions.Caching.Distributed.Sql.Sample.csproj", "Arqom.Extensions.Caching.Distributed.Sql.Sample/"]
+RUN dotnet restore "Arqom.Extensions.Caching.Distributed.Sql.Sample/Arqom.Extensions.Caching.Distributed.Sql.Sample.csproj"
 COPY . .
-WORKDIR "/src/Zamin.Extensions.Caching.Distributed.Sql.Sample"
-RUN dotnet build "Zamin.Extensions.Caching.Distributed.Sql.Sample.csproj" -c Release -o /app/build
+WORKDIR "/src/Arqom.Extensions.Caching.Distributed.Sql.Sample"
+RUN dotnet build "Arqom.Extensions.Caching.Distributed.Sql.Sample.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Zamin.Extensions.Caching.Distributed.Sql.Sample.csproj" -c Release -o /app/publish
+RUN dotnet publish "Arqom.Extensions.Caching.Distributed.Sql.Sample.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Zamin.Extensions.Caching.Distributed.Sql.Sample.dll"]
+ENTRYPOINT ["dotnet", "Arqom.Extensions.Caching.Distributed.Sql.Sample.dll"]

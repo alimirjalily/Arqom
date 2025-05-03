@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.SerilogRegistration.Options;
+﻿namespace Arqom.Utilities.SerilogRegistration.Options;
 public class SerilogApplicationEnricherOptions
 {
     public string ApplicationName { get; set; }

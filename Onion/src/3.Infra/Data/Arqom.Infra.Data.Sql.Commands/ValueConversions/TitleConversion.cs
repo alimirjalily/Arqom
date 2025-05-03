@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Zamin.Core.Domain.Toolkits.ValueObjects;
+using Arqom.Core.Domain.Toolkits.ValueObjects;
 
-namespace Zamin.Infra.Data.Sql.Commands.ValueConversions
+namespace Arqom.Infra.Data.Sql.Commands.ValueConversions
 {
     public class TitleConversion : ValueConverter<Title, string>
     {

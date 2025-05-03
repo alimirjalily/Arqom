@@ -1,4 +1,4 @@
-﻿namespace Zamin.Core.RequestResponse.Common;
+﻿namespace Arqom.Core.RequestResponse.Common;
 public interface IApplicationServiceResult
 {
     IEnumerable<string> Messages { get; }

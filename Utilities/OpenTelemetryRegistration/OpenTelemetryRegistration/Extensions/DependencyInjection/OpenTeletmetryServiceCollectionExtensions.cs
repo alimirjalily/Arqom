@@ -6,13 +6,13 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using System.Diagnostics.Metrics;
-using Zamin.Utilities.OpenTelemetryRegistration.Monitoring;
-using Zamin.Utilities.OpenTelemetryRegistration.Options;
+using Arqom.Utilities.OpenTelemetryRegistration.Monitoring;
+using Arqom.Utilities.OpenTelemetryRegistration.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 public static class OpenTeletmetryServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminObservabilitySupport(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomObservabilitySupport(this IServiceCollection services, IConfiguration configuration)
     {
 
         services.Configure<OpenTeletmetryOptions>(configuration);
@@ -21,13 +21,13 @@ public static class OpenTeletmetryServiceCollectionExtensions
         return services;
     }
 
-    public static IServiceCollection AddZaminObservabilitySupport(this IServiceCollection services, IConfiguration configuration, string sectionName)
+    public static IServiceCollection AddArqomObservabilitySupport(this IServiceCollection services, IConfiguration configuration, string sectionName)
     {
-        services.AddZaminObservabilitySupport(configuration.GetSection(sectionName));
+        services.AddArqomObservabilitySupport(configuration.GetSection(sectionName));
         return services;
     }
 
-    public static IServiceCollection AddZaminObservabilitySupport(this IServiceCollection services, Action<OpenTeletmetryOptions> setupAction)
+    public static IServiceCollection AddArqomObservabilitySupport(this IServiceCollection services, Action<OpenTeletmetryOptions> setupAction)
     {
         services.Configure(setupAction);
         RegisterTraceServices(services);
@@ -79,7 +79,7 @@ public static class OpenTeletmetryServiceCollectionExtensions
     }
 
 
-    public static IApplicationBuilder UseZaminObservabilityMiddlewares(this IApplicationBuilder app)
+    public static IApplicationBuilder UseArqomObservabilityMiddlewares(this IApplicationBuilder app)
     {
         app.UseMiddleware<ResponseMetricMiddleware>();
         app.UseOpenTelemetryPrometheusScrapingEndpoint();

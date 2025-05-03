@@ -1,19 +1,19 @@
-﻿using Zamin.Utilities;
-using Zamin.Core.Contracts.ApplicationServices.Commands;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Core.RequestResponse.Common;
+﻿using Arqom.Utilities;
+using Arqom.Core.Contracts.ApplicationServices.Commands;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Core.RequestResponse.Common;
 
-namespace Zamin.Core.ApplicationServices.Commands;
+namespace Arqom.Core.ApplicationServices.Commands;
 
 public abstract class CommandHandler<TCommand, TData> : ICommandHandler<TCommand, TData>
     where TCommand : ICommand<TData>
 {
 
-    protected readonly ZaminServices _zaminServices;
+    protected readonly ArqomServices _ArqomServices;
     protected readonly CommandResult<TData> result = new();
-    public CommandHandler(ZaminServices zaminServices)
+    public CommandHandler(ArqomServices ArqomServices)
     {
-        _zaminServices = zaminServices;
+        _ArqomServices = ArqomServices;
     }
 
     public abstract Task<CommandResult<TData>> Handle(TCommand command);
@@ -45,22 +45,22 @@ public abstract class CommandHandler<TCommand, TData> : ICommandHandler<TCommand
 
     protected void AddMessage(string message)
     {
-        result.AddMessage(_zaminServices.Translator[message]);
+        result.AddMessage(_ArqomServices.Translator[message]);
     }
     protected void AddMessage(string message, params string[] arguments)
     {
-        result.AddMessage(_zaminServices.Translator[message, arguments]);
+        result.AddMessage(_ArqomServices.Translator[message, arguments]);
     }
 }
 
 public abstract class CommandHandler<TCommand> : ICommandHandler<TCommand>
 where TCommand : ICommand
 {
-    protected readonly ZaminServices _zaminServices;
+    protected readonly ArqomServices _ArqomServices;
     protected readonly CommandResult result = new();
-    public CommandHandler(ZaminServices zaminServices)
+    public CommandHandler(ArqomServices ArqomServices)
     {
-        _zaminServices = zaminServices;
+        _ArqomServices = ArqomServices;
     }
     public abstract Task<CommandResult> Handle(TCommand command);
 
@@ -88,11 +88,11 @@ where TCommand : ICommand
     }
     protected void AddMessage(string message)
     {
-        result.AddMessage(_zaminServices.Translator[message]);
+        result.AddMessage(_ArqomServices.Translator[message]);
     }
     protected void AddMessage(string message, params string[] arguments)
     {
-        result.AddMessage(_zaminServices.Translator[message, arguments]);
+        result.AddMessage(_ArqomServices.Translator[message, arguments]);
     }
 }
 

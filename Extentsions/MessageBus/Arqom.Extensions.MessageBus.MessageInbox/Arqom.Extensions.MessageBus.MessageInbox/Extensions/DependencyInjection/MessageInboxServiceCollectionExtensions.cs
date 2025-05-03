@@ -1,27 +1,27 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.MessageBus.Abstractions;
-using Zamin.Extensions.MessageBus.MessageInbox;
-using Zamin.Extensions.MessageBus.MessageInbox.Options;
+using Arqom.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.MessageInbox;
+using Arqom.Extensions.MessageBus.MessageInbox.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class MessageInboxServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminMessageInbox(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomMessageInbox(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<MessageInboxOptions>(configuration);
         AddServices(services);
         return services;
     }
 
-    public static IServiceCollection AddZaminMessageInbox(this IServiceCollection services, IConfiguration configuration, string sectionName)
+    public static IServiceCollection AddArqomMessageInbox(this IServiceCollection services, IConfiguration configuration, string sectionName)
     {
-        services.AddZaminMessageInbox(configuration.GetSection(sectionName));
+        services.AddArqomMessageInbox(configuration.GetSection(sectionName));
         return services;
     }
 
-    public static IServiceCollection AddZaminMessageInbox(this IServiceCollection services, Action<MessageInboxOptions> setupAction)
+    public static IServiceCollection AddArqomMessageInbox(this IServiceCollection services, Action<MessageInboxOptions> setupAction)
     {
         services.Configure(setupAction);
         AddServices(services);

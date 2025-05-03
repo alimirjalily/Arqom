@@ -1,21 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Zamin.Utilities;
-using Zamin.EndPoints.Web.Extensions;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Core.Contracts.ApplicationServices.Events;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Core.RequestResponse.Common;
-using Zamin.Core.RequestResponse.Queries;
+using Arqom.Utilities;
+using Arqom.EndPoints.Web.Extensions;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Core.Contracts.ApplicationServices.Events;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Core.RequestResponse.Common;
+using Arqom.Core.RequestResponse.Queries;
 
-namespace Zamin.EndPoints.Web.Controllers
+namespace Arqom.EndPoints.Web.Controllers
 {
     public class BaseController : Controller
     {
         protected ICommandDispatcher CommandDispatcher => HttpContext.CommandDispatcher();
         protected IQueryDispatcher QueryDispatcher => HttpContext.QueryDispatcher();
         protected IEventDispatcher EventDispatcher => HttpContext.EventDispatcher();
-        protected ZaminServices ZaminApplicationContext => HttpContext.ZaminApplicationContext();
+        protected ArqomServices ArqomApplicationContext => HttpContext.ArqomApplicationContext();
 
         public IActionResult Excel<T>(List<T> list)
         {

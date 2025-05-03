@@ -1,8 +1,8 @@
 ﻿using MiniBlog.Core.Contracts.Blogs.Queries;
 using MiniBlog.Core.RequestResponse.Blogs.Queries.GetById;
-using Zamin.Core.ApplicationServices.Queries;
-using Zamin.Core.RequestResponse.Queries;
-using Zamin.Utilities;
+using Arqom.Core.ApplicationServices.Queries;
+using Arqom.Core.RequestResponse.Queries;
+using Arqom.Utilities;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Queries.GetById;
 
@@ -10,8 +10,8 @@ public class GetBlogByIdQueryHandler : QueryHandler<GetBlogByIdQuery, BlogQr?>
 {
     private readonly IBlogQueryRepository _blogQueryRepository;
 
-    public GetBlogByIdQueryHandler(ZaminServices zaminServices,
-                                   IBlogQueryRepository blogQueryRepository) : base(zaminServices)
+    public GetBlogByIdQueryHandler(ArqomServices ArqomServices,
+                                   IBlogQueryRepository blogQueryRepository) : base(ArqomServices)
     {
         _blogQueryRepository = blogQueryRepository;
     }

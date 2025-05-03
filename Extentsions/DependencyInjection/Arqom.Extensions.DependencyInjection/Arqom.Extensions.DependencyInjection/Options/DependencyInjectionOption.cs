@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.DependencyInjection.Options;
+﻿namespace Arqom.Extensions.DependencyInjection.Options;
 
 public class DependencyInjectionOption
 {

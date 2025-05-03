@@ -1,16 +1,16 @@
 ﻿using MiniBlog.Core.Contracts.Blogs.Commands;
 using MiniBlog.Core.RequestResponse.Blogs.Commands.Delete;
-using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.Contracts.Data.Commands;
-using Zamin.Core.Domain.Exceptions;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Utilities;
+using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.Contracts.Data.Commands;
+using Arqom.Core.Domain.Exceptions;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Utilities;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Commands.Delete;
 
-public sealed class DeleteBlogCommandHandler(ZaminServices zaminServices,
+public sealed class DeleteBlogCommandHandler(ArqomServices ArqomServices,
                                 IBlogCommandRepository blogCommandRepository,
-                                IUnitOfWork blogUnitOfWork) : CommandHandler<DeleteBlogCommand>(zaminServices)
+                                IUnitOfWork blogUnitOfWork) : CommandHandler<DeleteBlogCommand>(ArqomServices)
 {
     private readonly IUnitOfWork _blogUnitOfWork = blogUnitOfWork;
     private readonly IBlogCommandRepository _blogCommandRepository = blogCommandRepository;

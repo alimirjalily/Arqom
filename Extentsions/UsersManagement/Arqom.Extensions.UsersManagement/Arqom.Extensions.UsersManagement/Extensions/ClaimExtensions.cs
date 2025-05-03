@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Zamin.Extensions.UsersManagement.Extensions;
+namespace Arqom.Extensions.UsersManagement.Extensions;
 
 public static class ClaimExtensions
 {

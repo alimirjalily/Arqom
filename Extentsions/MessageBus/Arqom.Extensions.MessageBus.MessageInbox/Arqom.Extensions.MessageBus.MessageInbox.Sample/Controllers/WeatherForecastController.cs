@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Zamin.Extensions.MessageBus.MessageInbox.Sample.Controllers;
+namespace Arqom.Extensions.MessageBus.MessageInbox.Sample.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase

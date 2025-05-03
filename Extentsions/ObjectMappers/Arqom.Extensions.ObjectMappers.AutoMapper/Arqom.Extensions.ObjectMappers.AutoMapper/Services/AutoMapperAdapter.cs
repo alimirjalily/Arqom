@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Logging;
-using Zamin.Extensions.ObjectMappers.Abstractions;
+using Arqom.Extensions.ObjectMappers.Abstractions;
 
-namespace Zamin.Extensions.ObjectMappers.AutoMapper.Services;
+namespace Arqom.Extensions.ObjectMappers.AutoMapper.Services;
 
 public class AutoMapperAdapter : IMapperAdapter
 {

@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.Serializers.Microsoft.Sample": {
+    "Arqom.Extensions.Serializers.Microsoft.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

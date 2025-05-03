@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Options;
 using System.Security.Claims;
-using Zamin.Extensions.UsersManagement.Extensions;
-using Zamin.Extensions.UsersManagement.Options;
-using Zamin.Extensions.UsersManagement.Abstractions;
+using Arqom.Extensions.UsersManagement.Extensions;
+using Arqom.Extensions.UsersManagement.Options;
+using Arqom.Extensions.UsersManagement.Abstractions;
 using Microsoft.AspNetCore.Http;
 
-namespace Zamin.Extensions.UsersManagement.Services;
+namespace Arqom.Extensions.UsersManagement.Services;
 
 public class WebUserInfoService(IHttpContextAccessor httpContextAccessor, IOptions<UserManagementOptions> configuration) : IUserInfoService
 {

@@ -1,5 +1,5 @@
 using Microsoft.OpenApi.Models;
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +44,7 @@ builder.Services.AddAuthentication("token")
     });
 
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddZaminWebUserInfoService(c =>
+builder.Services.AddArqomWebUserInfoService(c =>
 {
     c.DefaultUserId = "1";
 });

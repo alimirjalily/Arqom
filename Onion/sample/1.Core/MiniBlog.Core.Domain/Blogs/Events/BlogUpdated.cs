@@ -1,4 +1,4 @@
-﻿using Zamin.Core.Domain.Events;
+﻿using Arqom.Core.Domain.Events;
 
 namespace MiniBlog.Core.Domain.Blogs.Events;
 

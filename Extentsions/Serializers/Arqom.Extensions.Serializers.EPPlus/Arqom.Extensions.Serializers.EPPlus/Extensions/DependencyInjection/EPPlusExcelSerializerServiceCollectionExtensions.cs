@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.Serializers.EPPlus.Services;
-using Zamin.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Serializers.EPPlus.Services;
+using Arqom.Extensions.Serializers.Abstractions;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class EPPlusExcelSerializerServiceCollectionExtensions
 {

@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
-using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.ApplicationServices.Events;
-using Zamin.Core.ApplicationServices.Queries;
-using Zamin.Core.Contracts.ApplicationServices.Events;
+using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.ApplicationServices.Events;
+using Arqom.Core.ApplicationServices.Queries;
+using Arqom.Core.Contracts.ApplicationServices.Events;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class AddApplicationServicesExtensions
 {
-    public static IServiceCollection AddZaminApplicationServices(this IServiceCollection services,
+    public static IServiceCollection AddArqomApplicationServices(this IServiceCollection services,
                                                                  IEnumerable<Assembly> assembliesForSearch)
         => services.AddCommandHandlers(assembliesForSearch)
                    .AddCommandDispatcherDecorators()

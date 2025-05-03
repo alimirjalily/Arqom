@@ -1,7 +1,7 @@
-﻿using Zamin.Core.Contracts.ApplicationServices.Events;
-using Zamin.Core.Domain.Events;
+﻿using Arqom.Core.Contracts.ApplicationServices.Events;
+using Arqom.Core.Domain.Events;
 
-namespace Zamin.Core.ApplicationServices.Events;
+namespace Arqom.Core.ApplicationServices.Events;
 
 public abstract class EventDispatcherDecorator : IEventDispatcher
 {

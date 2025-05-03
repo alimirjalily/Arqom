@@ -1,4 +1,4 @@
-﻿using Zamin.Core.Domain.Entities;
+﻿using Arqom.Core.Domain.Entities;
 
 namespace MiniBlog.Core.Domain.People.Entities
 {

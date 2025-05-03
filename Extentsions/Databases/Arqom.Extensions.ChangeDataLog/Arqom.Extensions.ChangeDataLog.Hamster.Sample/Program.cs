@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Zamin.Extensions.ChangeDataLog.Hamster.Sample.DAL;
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Infra.Data.Sql.Commands.Interceptors;
+using Arqom.Extensions.ChangeDataLog.Hamster.Sample.DAL;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Infra.Data.Sql.Commands.Interceptors;
 
 string cnnString = "Server=;User Id=;Database=; Password=;MultipleActiveResultSets=true;Encrypt = false";
 var builder = WebApplication.CreateBuilder(args);
@@ -9,16 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddZaminChageDatalogDalSql(c =>
+builder.Services.AddArqomChageDatalogDalSql(c =>
 {
     c.ConnectionString = cnnString;
 
 });
-builder.Services.AddZaminHamsterChageDatalog(c =>
+builder.Services.AddArqomHamsterChageDatalog(c =>
 {
     c.BusinessIdFieldName= "Id";
 });
-builder.Services.AddZaminWebUserInfoService(c =>
+builder.Services.AddArqomWebUserInfoService(c =>
 {
     c.DefaultUserId = "1";
 },useFake:true);

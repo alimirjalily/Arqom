@@ -8,11 +8,11 @@
 
 		<ItemGroup>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
-				<PackageReference Include="Zamin.Extensions.UsersManagement" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.UsersManagement" Version="9.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Utilities.SerilogRegistration\Zamin.Utilities.SerilogRegistration.csproj" />
+				<ProjectReference Include="..\Arqom.Utilities.SerilogRegistration\Arqom.Utilities.SerilogRegistration.csproj" />
 		</ItemGroup>
 
 </Project>

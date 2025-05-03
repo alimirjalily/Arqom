@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.MessageBus.MessageInbox.Options
+﻿namespace Arqom.Extensions.MessageBus.MessageInbox.Options
 {
     public class MessageInboxOptions
     {

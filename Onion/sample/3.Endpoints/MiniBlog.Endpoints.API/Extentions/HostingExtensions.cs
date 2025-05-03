@@ -5,13 +5,13 @@ using MiniBlog.Endpoints.API.Extentions.DependencyInjection.Swaggers.Extentions;
 using MiniBlog.Infra.Data.Sql.Commands.Common;
 using MiniBlog.Infra.Data.Sql.Queries.Common;
 using Serilog;
-using Zamin.Core.ApplicationServices.Commands;
-using Zamin.Core.ApplicationServices.Events;
-using Zamin.Core.ApplicationServices.Queries;
-using Zamin.EndPoints.Web.Extensions.ModelBinding;
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Extensions.Events.Outbox.Dal.EF.Interceptors;
-using Zamin.Infra.Data.Sql.Commands.Interceptors;
+using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.ApplicationServices.Events;
+using Arqom.Core.ApplicationServices.Queries;
+using Arqom.EndPoints.Web.Extensions.ModelBinding;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Extensions.Events.Outbox.Dal.EF.Interceptors;
+using Arqom.Infra.Data.Sql.Commands.Interceptors;
 
 namespace MiniBlog.Endpoints.API.Extentions;
 
@@ -25,33 +25,33 @@ public static class HostingExtensions
         builder.Services.AddSingleton<QueryDispatcherDecorator, CustomQueryDecorator>();
         builder.Services.AddSingleton<EventDispatcherDecorator, CustomEventDecorator>();
 
-        //zamin
-        builder.Services.AddZaminApiCore("Zamin", "ZaminTemplate");
+        //Arqom
+        builder.Services.AddArqomApiCore("Arqom", "ArqomTemplate");
 
         //microsoft
         builder.Services.AddEndpointsApiExplorer();
 
-        //zamin
-        builder.Services.AddZaminWebUserInfoService(configuration, "WebUserInfo", true);
+        //Arqom
+        builder.Services.AddArqomWebUserInfoService(configuration, "WebUserInfo", true);
 
-        //zamin
-        builder.Services.AddZaminParrotTranslator(configuration, "ParrotTranslator");
+        //Arqom
+        builder.Services.AddArqomParrotTranslator(configuration, "ParrotTranslator");
 
-        //zamin
+        //Arqom
         //builder.Services.AddSoftwarePartDetector(configuration, "SoftwarePart");
 
-        //zamin
+        //Arqom
         builder.Services.AddNonValidatingValidator();
 
-        //zamin
-        builder.Services.AddZaminMicrosoftSerializer();
+        //Arqom
+        builder.Services.AddArqomMicrosoftSerializer();
 
-        //zamin
-        builder.Services.AddZaminAutoMapperProfiles(configuration, "AutoMapper");
+        //Arqom
+        builder.Services.AddArqomAutoMapperProfiles(configuration, "AutoMapper");
 
-        //zamin
-        builder.Services.AddZaminInMemoryCaching();
-        //builder.Services.AddZaminSqlDistributedCache(configuration, "SqlDistributedCache");
+        //Arqom
+        builder.Services.AddArqomInMemoryCaching();
+        //builder.Services.AddArqomSqlDistributedCache(configuration, "SqlDistributedCache");
 
         //CommandDbContext
         builder.Services.AddDbContext<MiniblogCommandDbContext>(
@@ -64,16 +64,16 @@ public static class HostingExtensions
             c => c.UseSqlServer(configuration.GetConnectionString("QueryDb_ConnectionString")));
 
         //PollingPublisher
-        //builder.Services.AddZaminPollingPublisherDalSql(configuration, "PollingPublisherSqlStore");
-        //builder.Services.AddZaminPollingPublisher(configuration, "PollingPublisher");
+        //builder.Services.AddArqomPollingPublisherDalSql(configuration, "PollingPublisherSqlStore");
+        //builder.Services.AddArqomPollingPublisher(configuration, "PollingPublisher");
 
         //MessageInbox
-        //builder.Services.AddZaminMessageInboxDalSql(configuration, "MessageInboxSqlStore");
-        //builder.Services.AddZaminMessageInbox(configuration, "MessageInbox");
+        //builder.Services.AddArqomMessageInboxDalSql(configuration, "MessageInboxSqlStore");
+        //builder.Services.AddArqomMessageInbox(configuration, "MessageInbox");
 
-        //builder.Services.AddZaminRabbitMqMessageBus(configuration, "RabbitMq");
+        //builder.Services.AddArqomRabbitMqMessageBus(configuration, "RabbitMq");
 
-        //builder.Services.AddZaminTraceJeager(configuration, "OpenTeletmetry");
+        //builder.Services.AddArqomTraceJeager(configuration, "OpenTeletmetry");
 
         //builder.Services.AddIdentityServer(configuration, "OAuth");
 
@@ -84,8 +84,8 @@ public static class HostingExtensions
 
     public static WebApplication ConfigurePipeline(this WebApplication app)
     {
-        //zamin
-        app.UseZaminApiExceptionHandler();
+        //Arqom
+        app.UseArqomApiExceptionHandler();
 
         //Serilog
         app.UseSerilogRequestLogging();

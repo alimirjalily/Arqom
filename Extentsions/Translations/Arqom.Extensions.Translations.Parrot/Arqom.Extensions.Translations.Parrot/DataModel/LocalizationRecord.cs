@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.Translations.Parrot.DataModel;
+﻿namespace Arqom.Extensions.Translations.Parrot.DataModel;
 public class LocalizationRecord
 {
     public long Id { get; set; }

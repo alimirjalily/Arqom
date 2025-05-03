@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Zamin.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Serializers.Abstractions;
 
-namespace Zamin.Extensions.Serializers.NewtonSoft.Services;
+namespace Arqom.Extensions.Serializers.NewtonSoft.Services;
 
 public class NewtonSoftSerializer : IJsonSerializer, IDisposable
 {

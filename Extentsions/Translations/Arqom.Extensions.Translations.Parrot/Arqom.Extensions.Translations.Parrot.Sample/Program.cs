@@ -1,5 +1,5 @@
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Extensions.Translations.Parrot.Options;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Extensions.Translations.Parrot.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 /// <summary>
 /// برای فعال سازی مترجم باید تنظیمات مرتبط با دیتابیس و محدوده زمانی که داده‌ها از دیتابیس بارگذاری مجدد می‌شود را تعیین کنیم.
 /// </summary>
-builder.Services.AddZaminParrotTranslator(c =>
+builder.Services.AddArqomParrotTranslator(c =>
 {
     c.ConnectionString = "Server=.; Initial Catalog=MiniBlogDb; User Id=sa; Password=1qaz!QAZ";
     c.AutoCreateSqlTable = true;

@@ -1,16 +1,16 @@
-﻿using Zamin.Extensions.DependencyInjection.Abstractions;
+﻿using Arqom.Extensions.DependencyInjection.Abstractions;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class Extensions
 {
 
-    public static IServiceCollection AddZaminDependencies(this IServiceCollection services,
+    public static IServiceCollection AddArqomDependencies(this IServiceCollection services,
         params string[] assemblyNamesForSearch)
     {
 
         var assemblies = GetAssemblies(assemblyNamesForSearch);
-        services.AddZaminApplicationServices(assemblies).AddZaminDataAccess(assemblies).AddZaminUntilityServices().AddCustomeDepenecies(assemblies);
+        services.AddArqomApplicationServices(assemblies).AddArqomDataAccess(assemblies).AddArqomUntilityServices().AddCustomeDepenecies(assemblies);
         return services;
     }
     public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, IEnumerable<Assembly> assemblies)

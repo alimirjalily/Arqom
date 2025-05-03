@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.UsersManagement.Options;
+﻿namespace Arqom.Extensions.UsersManagement.Options;
 public sealed class UserManagementOptions
 {
     public string DefaultUserId { get; set; } = "1";

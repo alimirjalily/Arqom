@@ -1,27 +1,27 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Zamin.Extensions.MessageBus.Abstractions;
-using Zamin.Extensions.MessageBus.MessageInbox.Dal.Dapper;
-using Zamin.Extensions.MessageBus.MessageInbox.Dal.Dapper.Options;
+using Arqom.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper;
+using Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class MessageInboxServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminMessageInboxDalSql(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomMessageInboxDalSql(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<MessageInboxDalDapperOptions>(configuration);
         AddServices(services);
         return services;
     }
 
-    public static IServiceCollection AddZaminMessageInboxDalSql(this IServiceCollection services, IConfiguration configuration, string sectionName)
+    public static IServiceCollection AddArqomMessageInboxDalSql(this IServiceCollection services, IConfiguration configuration, string sectionName)
     {
-        services.AddZaminMessageInboxDalSql(configuration.GetSection(sectionName));
+        services.AddArqomMessageInboxDalSql(configuration.GetSection(sectionName));
         return services;
     }
 
-    public static IServiceCollection AddZaminMessageInboxDalSql(this IServiceCollection services, Action<MessageInboxDalDapperOptions> setupAction)
+    public static IServiceCollection AddArqomMessageInboxDalSql(this IServiceCollection services, Action<MessageInboxDalDapperOptions> setupAction)
     {
         services.Configure(setupAction);
         AddServices(services);

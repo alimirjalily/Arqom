@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Zamin.EndPoints.Web.Filters
+namespace Arqom.EndPoints.Web.Filters
 {
     public class ValidateModelStateAttribute : ActionFilterAttribute
     {

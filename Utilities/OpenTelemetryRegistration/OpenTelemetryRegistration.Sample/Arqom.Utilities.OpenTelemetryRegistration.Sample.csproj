@@ -16,7 +16,7 @@
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\OpenTelemetryRegistration\Zamin.Utilities.OpenTelemetryRegistration.csproj" />
+				<ProjectReference Include="..\OpenTelemetryRegistration\Arqom.Utilities.OpenTelemetryRegistration.csproj" />
 		</ItemGroup>
 
 </Project>

@@ -1,14 +1,14 @@
 ﻿using Serilog;
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
-namespace Zamin.Utilities.SerilogRegistration.Sample;
+namespace Arqom.Utilities.SerilogRegistration.Sample;
 
 public static class HostingExtensions
 {
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddControllers();
-        builder.Services.AddZaminWebUserInfoService(c =>
+        builder.Services.AddArqomWebUserInfoService(c =>
         {
             c.DefaultUserId = "1";
         }, true) ;

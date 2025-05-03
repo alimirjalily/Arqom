@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Zamin.Utilities.DateTimes;
+namespace Arqom.Utilities.DateTimes;
 /// <summary>
 /// Converts English digits of a given number to their equivalent Persian digits.
 /// </summary>

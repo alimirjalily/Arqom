@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Extensions.Serializers.Microsoft.Sample.Models;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Extensions.Serializers.Microsoft.Sample.Models;
 
-namespace Zamin.Extensions.Serializers.Microsoft.Sample.Controllers;
+namespace Arqom.Extensions.Serializers.Microsoft.Sample.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

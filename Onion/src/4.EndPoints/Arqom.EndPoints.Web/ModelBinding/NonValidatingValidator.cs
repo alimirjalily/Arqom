@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Zamin.EndPoints.Web.ModelBinding;
+namespace Arqom.EndPoints.Web.ModelBinding;
 
 public sealed class NonValidatingValidator : IObjectModelValidator
 {

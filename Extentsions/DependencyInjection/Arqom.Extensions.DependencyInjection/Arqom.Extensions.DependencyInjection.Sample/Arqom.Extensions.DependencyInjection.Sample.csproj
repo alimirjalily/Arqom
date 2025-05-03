@@ -12,7 +12,7 @@
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Extensions.DependencyInjection\Zamin.Extensions.DependencyInjection.csproj" />
+				<ProjectReference Include="..\Arqom.Extensions.DependencyInjection\Arqom.Extensions.DependencyInjection.csproj" />
 		</ItemGroup>
 
 </Project>

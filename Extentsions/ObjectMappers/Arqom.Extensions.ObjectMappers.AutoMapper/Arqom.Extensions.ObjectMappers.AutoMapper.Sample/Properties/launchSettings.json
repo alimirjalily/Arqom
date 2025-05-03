@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.ObjectMappers.AutoMapper.Sample": {
+    "Arqom.Extensions.ObjectMappers.AutoMapper.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

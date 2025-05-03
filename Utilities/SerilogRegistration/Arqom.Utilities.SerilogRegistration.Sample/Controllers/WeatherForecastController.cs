@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Zamin.Utilities.SerilogRegistration.Sample.Controllers;
+namespace Arqom.Utilities.SerilogRegistration.Sample.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase

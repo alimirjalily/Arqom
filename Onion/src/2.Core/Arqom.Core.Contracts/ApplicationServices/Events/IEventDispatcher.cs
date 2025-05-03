@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Domain.Events;
+﻿using Arqom.Core.Domain.Events;
 
-namespace Zamin.Core.Contracts.ApplicationServices.Events;
+namespace Arqom.Core.Contracts.ApplicationServices.Events;
 
 public interface IEventDispatcher
 {

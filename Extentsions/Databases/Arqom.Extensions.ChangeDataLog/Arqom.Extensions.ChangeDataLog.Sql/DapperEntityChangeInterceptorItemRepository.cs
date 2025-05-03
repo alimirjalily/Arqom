@@ -4,10 +4,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.Common;
-using Zamin.Extensions.ChangeDataLog.Abstractions;
-using Zamin.Extensions.ChangeDataLog.Sql.Options;
+using Arqom.Extensions.ChangeDataLog.Abstractions;
+using Arqom.Extensions.ChangeDataLog.Sql.Options;
 
-namespace Zamin.Extensions.ChangeDataLog.Sql;
+namespace Arqom.Extensions.ChangeDataLog.Sql;
 
 public sealed class DapperEntityChangeInterceptorItemRepository : IEntityChageInterceptorItemRepository
 {

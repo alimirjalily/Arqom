@@ -2,7 +2,7 @@
 using MiniBlog.Core.Contracts.Blogs.Queries;
 using MiniBlog.Core.RequestResponse.Blogs.Queries.GetById;
 using MiniBlog.Infra.Data.Sql.Queries.Common;
-using Zamin.Infra.Data.Sql.Queries;
+using Arqom.Infra.Data.Sql.Queries;
 
 namespace MiniBlog.Infra.Data.Sql.Queries.Blogs;
 

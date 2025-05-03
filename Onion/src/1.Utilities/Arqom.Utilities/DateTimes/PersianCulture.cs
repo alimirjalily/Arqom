@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Reflection;
 
-namespace Zamin.Utilities.DateTimes;
+namespace Arqom.Utilities.DateTimes;
 /// <summary>
 /// فرهنگ فارسی سفارشی سازی شده
 /// </summary>

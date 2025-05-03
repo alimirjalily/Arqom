@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.Serializers.Microsoft.Sample.Models;
+﻿namespace Arqom.Extensions.Serializers.Microsoft.Sample.Models;
 
 public class Person
 {

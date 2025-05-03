@@ -1,5 +1,5 @@
 
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddZaminInMemoryCaching();
+builder.Services.AddArqomInMemoryCaching();
 
 //Middlewares
 

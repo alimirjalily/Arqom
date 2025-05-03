@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Zamin.Utilities.DateTimes;
+namespace Arqom.Utilities.DateTimes;
 /// <summary>
 /// متدهای کمکی مبتنی بر عبارات باقاعده
 /// </summary>

@@ -1,4 +1,4 @@
-namespace Zamin.Utilities.SerilogRegistration.Sample;
+namespace Arqom.Utilities.SerilogRegistration.Sample;
 
 public class WeatherForecast
 {

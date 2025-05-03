@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Zamin.Extensions.DependencyInjection.Sample.Services;
+using Arqom.Extensions.DependencyInjection.Sample.Services;
 
-namespace Zamin.Extensions.DependencyInjection.Sample.Controller;
+namespace Arqom.Extensions.DependencyInjection.Sample.Controller;
 
 [Route("api/[controller]")]
 [ApiController]

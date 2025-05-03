@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Zamin.Utilities.DateTimes;
+namespace Arqom.Utilities.DateTimes;
 /// <summary>
 /// نمایش دوستانه‌ی یک تاریخ و ساعت انگلیسی به شمسی
 /// </summary>

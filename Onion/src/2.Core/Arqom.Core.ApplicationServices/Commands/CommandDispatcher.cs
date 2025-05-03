@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
-using Zamin.Core.Contracts.ApplicationServices.Commands;
-using Zamin.Core.RequestResponse.Commands;
-using Zamin.Extensions.Logger.Abstractions;
+using Arqom.Core.Contracts.ApplicationServices.Commands;
+using Arqom.Core.RequestResponse.Commands;
+using Arqom.Extensions.Logger.Abstractions;
 
-namespace Zamin.Core.ApplicationServices.Commands;
+namespace Arqom.Core.ApplicationServices.Commands;
 
 public class CommandDispatcher : ICommandDispatcher
 {
@@ -44,7 +44,7 @@ public class CommandDispatcher : ICommandDispatcher
         finally
         {
             _stopwatch.Stop();
-            _logger.LogInformation(ZaminEventId.PerformanceMeasurement, "Processing the {CommandType} command tooks {Millisecconds} Millisecconds", command.GetType(), _stopwatch.ElapsedMilliseconds);
+            _logger.LogInformation(ArqomEventId.PerformanceMeasurement, "Processing the {CommandType} command tooks {Millisecconds} Millisecconds", command.GetType(), _stopwatch.ElapsedMilliseconds);
         }
 
     }

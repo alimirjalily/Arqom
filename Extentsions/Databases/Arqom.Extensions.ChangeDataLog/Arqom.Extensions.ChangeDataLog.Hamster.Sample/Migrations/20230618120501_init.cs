@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Zamin.Extensions.ChangeDataLog.Hamster.Sample.Migrations
+namespace Arqom.Extensions.ChangeDataLog.Hamster.Sample.Migrations
 {
     /// <inheritdoc />
     public partial class init : Migration

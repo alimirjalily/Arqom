@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Zamin.Infra.Data.Sql.Commands.Extensions
+namespace Arqom.Infra.Data.Sql.Commands.Extensions
 {
     public static class RowVersionShadowProperty
     {

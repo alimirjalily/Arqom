@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Extensions.Serializers.NewtonSoft.Sample": {
+    "Arqom.Extensions.Serializers.NewtonSoft.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

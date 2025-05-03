@@ -1,4 +1,4 @@
-namespace Zamin.Extensions.MessageBus.MessageInbox.Sample;
+namespace Arqom.Extensions.MessageBus.MessageInbox.Sample;
 
 public class WeatherForecast
 {

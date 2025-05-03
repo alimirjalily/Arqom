@@ -1,9 +1,9 @@
-﻿using Zamin.Extensions.Events.Abstractions;
-using Zamin.Extensions.Events.Outbox.Dal.EF.Configs;
-using Zamin.Extensions.Events.Outbox.Dal.EF.Interceptors;
-using Zamin.Infra.Data.Sql.Commands;
+﻿using Arqom.Extensions.Events.Abstractions;
+using Arqom.Extensions.Events.Outbox.Dal.EF.Configs;
+using Arqom.Extensions.Events.Outbox.Dal.EF.Interceptors;
+using Arqom.Infra.Data.Sql.Commands;
 
-namespace Zamin.Extensions.Events.Outbox.Dal.EF;
+namespace Arqom.Extensions.Events.Outbox.Dal.EF;
 
 public abstract class BaseOutboxCommandDbContext : BaseCommandDbContext
 {

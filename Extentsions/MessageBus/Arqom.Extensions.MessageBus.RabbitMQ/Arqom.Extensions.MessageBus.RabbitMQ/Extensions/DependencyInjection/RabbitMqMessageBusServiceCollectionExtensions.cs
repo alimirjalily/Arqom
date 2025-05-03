@@ -2,28 +2,28 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
-using Zamin.Extensions.MessageBus.Abstractions;
-using Zamin.Extensions.MessageBus.RabbitMQ;
-using Zamin.Extensions.MessageBus.RabbitMQ.Options;
+using Arqom.Extensions.MessageBus.Abstractions;
+using Arqom.Extensions.MessageBus.RabbitMQ;
+using Arqom.Extensions.MessageBus.RabbitMQ.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class RabbitMqMessageBusServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminRabbitMqMessageBus(this IServiceCollection services, IConfiguration configuration, List<Type>? commands = null, Dictionary<string, List<Type>>? events = null)
+    public static IServiceCollection AddArqomRabbitMqMessageBus(this IServiceCollection services, IConfiguration configuration, List<Type>? commands = null, Dictionary<string, List<Type>>? events = null)
     {
         services.Configure<RabbitMqOptions>(configuration);
         services.AddServices();
         return services;
     }
 
-    public static IServiceCollection AddZaminRabbitMqMessageBus(this IServiceCollection services, IConfiguration configuration, string sectionName, List<Type>? commands = null, Dictionary<string, List<Type>>? events = null)
+    public static IServiceCollection AddArqomRabbitMqMessageBus(this IServiceCollection services, IConfiguration configuration, string sectionName, List<Type>? commands = null, Dictionary<string, List<Type>>? events = null)
     {
-        services.AddZaminRabbitMqMessageBus(configuration.GetSection(sectionName));
+        services.AddArqomRabbitMqMessageBus(configuration.GetSection(sectionName));
         return services;
     }
 
-    public static IServiceCollection AddZaminRabbitMqMessageBus(this IServiceCollection services, Action<RabbitMqOptions> setupAction, List<Type>? commands = null, Dictionary<string, List<Type>>? events = null)
+    public static IServiceCollection AddArqomRabbitMqMessageBus(this IServiceCollection services, Action<RabbitMqOptions> setupAction, List<Type>? commands = null, Dictionary<string, List<Type>>? events = null)
     {
         services.Configure(setupAction);
         services.AddServices();

@@ -2,13 +2,13 @@
 using Serilog.Core;
 using Serilog.Events;
 using System.Reflection;
-using Zamin.Utilities.SerilogRegistration.Options;
+using Arqom.Utilities.SerilogRegistration.Options;
 
-namespace Zamin.Utilities.SerilogRegistration.Enrichers;
-public class ZaminApplicaitonEnricher : ILogEventEnricher
+namespace Arqom.Utilities.SerilogRegistration.Enrichers;
+public class ArqomApplicaitonEnricher : ILogEventEnricher
 {
     private readonly SerilogApplicationEnricherOptions _options;
-    public ZaminApplicaitonEnricher(IOptions<SerilogApplicationEnricherOptions> options)
+    public ArqomApplicaitonEnricher(IOptions<SerilogApplicationEnricherOptions> options)
     {
         _options = options.Value;
     }

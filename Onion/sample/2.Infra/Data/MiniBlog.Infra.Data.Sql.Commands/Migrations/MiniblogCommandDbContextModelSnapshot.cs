@@ -137,7 +137,7 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
                     b.ToTable("People");
                 });
 
-            modelBuilder.Entity("Zamin.Extensions.Events.Abstractions.OutBoxEventItem", b =>
+            modelBuilder.Entity("Arqom.Extensions.Events.Abstractions.OutBoxEventItem", b =>
                 {
                     b.Property<long>("OutBoxEventItemId")
                         .ValueGeneratedOnAdd()
@@ -197,7 +197,7 @@ namespace MiniBlog.Infra.Data.Sql.Commands.Migrations
 
                     b.HasKey("OutBoxEventItemId");
 
-                    b.ToTable("OutBoxEventItems", "zamin");
+                    b.ToTable("OutBoxEventItems", "Arqom");
                 });
 
             modelBuilder.Entity("MiniBlog.Core.Domain.Blogs.Entities.BlogPost", b =>

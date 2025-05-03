@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
-using Zamin.Core.Contracts.ApplicationServices.Events;
-using Zamin.Core.Domain.Events;
+using Arqom.Core.Contracts.ApplicationServices.Events;
+using Arqom.Core.Domain.Events;
 
-namespace Zamin.Core.ApplicationServices.Events;
+namespace Arqom.Core.ApplicationServices.Events;
 
 public class EventDispatcher : IEventDispatcher
 {

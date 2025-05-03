@@ -1,4 +1,4 @@
-﻿namespace Zamin.Extensions.MessageBus.RabbitMQ;
+﻿namespace Arqom.Extensions.MessageBus.RabbitMQ;
 
 public static class RabbitMqSendMessageBusConstants
 {

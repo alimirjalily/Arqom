@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MiniBlog.Infra.Data.Sql.Queries.Blogs;
-using Zamin.Infra.Data.Sql.Queries;
+using Arqom.Infra.Data.Sql.Queries;
 
 namespace MiniBlog.Infra.Data.Sql.Queries.Common
 {

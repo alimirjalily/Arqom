@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Zamin.Utilities.OpenTelemetryRegistration.Sample.Models;
+using Arqom.Utilities.OpenTelemetryRegistration.Sample.Models;
 
-namespace Zamin.Utilities.OpenTelemetryRegistration.Sample.Controllers
+namespace Arqom.Utilities.OpenTelemetryRegistration.Sample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

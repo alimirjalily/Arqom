@@ -1,4 +1,4 @@
-﻿namespace Zamin.Core.Domain.Exceptions;
+﻿namespace Arqom.Core.Domain.Exceptions;
 /// <summary>
 /// خطا‌های مربوط به وضعیت ناصحیح در ValueObject ها توسط این کلاس ارسال می‌شود
 /// </summary>

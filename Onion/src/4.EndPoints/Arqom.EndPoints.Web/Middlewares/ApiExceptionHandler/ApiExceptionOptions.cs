@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Zamin.EndPoints.Web.Middlewares.ApiExceptionHandler
+namespace Arqom.EndPoints.Web.Middlewares.ApiExceptionHandler
 {
     public class ApiExceptionOptions
     {

@@ -1,5 +1,5 @@
-﻿using Zamin.Core.Domain.Entities;
-using Zamin.Core.Domain.Toolkits.ValueObjects;
+﻿using Arqom.Core.Domain.Entities;
+using Arqom.Core.Domain.Toolkits.ValueObjects;
 
 namespace MiniBlog.Core.Domain.Blogs.Entities;
 

@@ -1,6 +1,6 @@
-﻿using Zamin.Core.Domain.Events;
+﻿using Arqom.Core.Domain.Events;
 
-namespace Zamin.Core.Domain.Entities
+namespace Arqom.Core.Domain.Entities
 {
     public interface IAggregateRoot
     {

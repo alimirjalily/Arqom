@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.Guards;
+﻿namespace Arqom.Utilities.Guards;
 
 public class Guard
 {

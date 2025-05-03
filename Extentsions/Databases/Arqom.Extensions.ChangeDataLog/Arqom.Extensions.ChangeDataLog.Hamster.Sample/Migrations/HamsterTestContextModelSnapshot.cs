@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Zamin.Extensions.ChangeDataLog.Hamster.Sample.DAL;
+using Arqom.Extensions.ChangeDataLog.Hamster.Sample.DAL;
 
 #nullable disable
 
-namespace Zamin.Extensions.ChangeDataLog.Hamster.Sample.Migrations
+namespace Arqom.Extensions.ChangeDataLog.Hamster.Sample.Migrations
 {
     [DbContext(typeof(HamsterTestContext))]
     partial class HamsterTestContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace Zamin.Extensions.ChangeDataLog.Hamster.Sample.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Zamin.Extensions.ChangeDataLog.Hamster.Sample.DAL.Person", b =>
+            modelBuilder.Entity("Arqom.Extensions.ChangeDataLog.Hamster.Sample.DAL.Person", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

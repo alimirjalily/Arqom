@@ -3,10 +3,10 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Data;
-using Zamin.Extensions.Events.Abstractions;
-using Zamin.Extensions.Events.PollingPublisher.Dal.Dapper.Options;
+using Arqom.Extensions.Events.Abstractions;
+using Arqom.Extensions.Events.PollingPublisher.Dal.Dapper.Options;
 
-namespace Zamin.Extensions.Events.PollingPublisher.Dal.Dapper.DataAccess
+namespace Arqom.Extensions.Events.PollingPublisher.Dal.Dapper.DataAccess
 {
 
     public class SqlOutBoxEventItemRepository : IOutBoxEventItemRepository
