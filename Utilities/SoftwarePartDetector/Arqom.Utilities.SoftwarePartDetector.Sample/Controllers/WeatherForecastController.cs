@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Zamin.Utilities.SoftwarePartDetector.Attributes;
+using Arqom.Utilities.SoftwarePartDetector.Attributes;
 
-namespace Zamin.Utilities.SoftwarePartDetector.Sample.Controllers;
+namespace Arqom.Utilities.SoftwarePartDetector.Sample.Controllers;
 
 [ApiController]
 [Route("[controller]")]

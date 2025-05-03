@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Zamin.Utilities.ScalarRegistration\Zamin.Utilities.ScalarRegistration.csproj" />
+    <ProjectReference Include="..\Arqom.Utilities.ScalarRegistration\Arqom.Utilities.ScalarRegistration.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System.Security.Claims;
-using Zamin.Extensions.Caching.Abstractions;
-using Zamin.Utilities.Auth.ApiAuthentication.Models;
-using Zamin.Utilities.Auth.ApiAuthentication.Options;
+using Arqom.Extensions.Caching.Abstractions;
+using Arqom.Utilities.Auth.ApiAuthentication.Models;
+using Arqom.Utilities.Auth.ApiAuthentication.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class ProviderExtensions
 {

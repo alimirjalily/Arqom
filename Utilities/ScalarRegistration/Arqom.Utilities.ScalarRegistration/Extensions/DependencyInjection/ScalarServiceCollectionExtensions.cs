@@ -3,16 +3,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Scalar.AspNetCore;
-using Zamin.Utilities.ScalarRegistration.Options;
+using Arqom.Utilities.ScalarRegistration.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class ScalarServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminScalar(this IServiceCollection services, IConfiguration configuration, string sectionName)
-        => services.AddZaminScalar(configuration.GetSection(sectionName));
+    public static IServiceCollection AddArqomScalar(this IServiceCollection services, IConfiguration configuration, string sectionName)
+        => services.AddArqomScalar(configuration.GetSection(sectionName));
 
-    public static IServiceCollection AddZaminScalar(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomScalar(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<ScalarOption>(configuration);
         var option = configuration.Get<ScalarOption>() ?? new();
@@ -20,7 +20,7 @@ public static class ScalarServiceCollectionExtensions
         return services.AddService(option);
     }
 
-    public static IServiceCollection AddZaminScalar(this IServiceCollection services, Action<ScalarOption> action)
+    public static IServiceCollection AddArqomScalar(this IServiceCollection services, Action<ScalarOption> action)
     {
         services.Configure(action);
         var option = new ScalarOption();
@@ -39,7 +39,7 @@ public static class ScalarServiceCollectionExtensions
         return services;
     }
 
-    public static void UseZaminScalar(this WebApplication app)
+    public static void UseArqomScalar(this WebApplication app)
     {
         var option = app.Services.GetRequiredService<IOptions<ScalarOption>>().Value;
         if (option.Enabled)

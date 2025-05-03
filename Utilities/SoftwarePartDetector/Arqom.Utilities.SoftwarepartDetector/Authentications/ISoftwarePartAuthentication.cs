@@ -1,6 +1,6 @@
 ﻿using IdentityModel.Client;
 
-namespace Zamin.Utilities.SoftwarePartDetector.Authentications;
+namespace Arqom.Utilities.SoftwarePartDetector.Authentications;
 
 public interface ISoftwarePartAuthentication
 {

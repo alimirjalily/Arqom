@@ -1,11 +1,11 @@
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddZaminScalar(builder.Configuration, "Scalar");
+builder.Services.AddArqomScalar(builder.Configuration, "Scalar");
 
 
 var app = builder.Build();
@@ -15,7 +15,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-app.UseZaminScalar();
+app.UseArqomScalar();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

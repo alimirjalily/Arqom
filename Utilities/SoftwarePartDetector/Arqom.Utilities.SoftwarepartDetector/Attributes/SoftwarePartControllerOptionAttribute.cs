@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.SoftwarePartDetector.Attributes;
+﻿namespace Arqom.Utilities.SoftwarePartDetector.Attributes;
 
 public class SoftwarePartControllerOptionAttribute : Attribute
 {

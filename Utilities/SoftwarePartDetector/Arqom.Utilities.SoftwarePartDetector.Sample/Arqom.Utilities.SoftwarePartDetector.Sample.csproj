@@ -9,11 +9,11 @@
 
 		<ItemGroup>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
-				<PackageReference Include="Zamin.Extensions.Serializers.Microsoft" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Serializers.Microsoft" Version="9.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
-				<ProjectReference Include="..\Zamin.Utilities.SoftwarepartDetector\Zamin.Utilities.SoftwarePartDetector.csproj" />
+				<ProjectReference Include="..\Arqom.Utilities.SoftwarepartDetector\Arqom.Utilities.SoftwarePartDetector.csproj" />
 		</ItemGroup>
 
 </Project>

@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using System.Security.Claims;
-using Zamin.Utilities.Auth.ApiAuthentication.Extensions;
-using Zamin.Utilities.Auth.ApiAuthentication.Options;
+using Arqom.Utilities.Auth.ApiAuthentication.Extensions;
+using Arqom.Utilities.Auth.ApiAuthentication.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class ReferenceTokenExtensions
 {

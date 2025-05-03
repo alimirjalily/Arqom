@@ -2,12 +2,12 @@
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Text;
-using Zamin.Extensions.Serializers.Abstractions;
-using Zamin.Utilities.SoftwarePartDetector.Authentications;
-using Zamin.Utilities.SoftwarePartDetector.DataModel;
-using Zamin.Utilities.SoftwarePartDetector.Options;
+using Arqom.Extensions.Serializers.Abstractions;
+using Arqom.Utilities.SoftwarePartDetector.Authentications;
+using Arqom.Utilities.SoftwarePartDetector.DataModel;
+using Arqom.Utilities.SoftwarePartDetector.Options;
 
-namespace Zamin.Utilities.SoftwarePartDetector.Publishers;
+namespace Arqom.Utilities.SoftwarePartDetector.Publishers;
 
 public class SoftwarePartWebPublisher : ISoftwarePartPublisher
 {

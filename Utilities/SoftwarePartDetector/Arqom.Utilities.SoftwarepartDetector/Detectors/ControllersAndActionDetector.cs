@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Zamin.Utilities.SoftwarePartDetector.Attributes;
-using Zamin.Utilities.SoftwarePartDetector.DataModel;
-namespace Zamin.Utilities.SoftwarePartDetector;
+using Arqom.Utilities.SoftwarePartDetector.Attributes;
+using Arqom.Utilities.SoftwarePartDetector.DataModel;
+namespace Arqom.Utilities.SoftwarePartDetector;
 public class ControllersAndActionDetector
 {
     private readonly IActionDescriptorCollectionProvider _actionDescriptorCollectionProvider;

@@ -1,6 +1,6 @@
-﻿using Zamin.Utilities.SoftwarePartDetector.DataModel;
+﻿using Arqom.Utilities.SoftwarePartDetector.DataModel;
 
-namespace Zamin.Utilities.SoftwarePartDetector;
+namespace Arqom.Utilities.SoftwarePartDetector;
 
 public class SoftwarePartDetector
 {

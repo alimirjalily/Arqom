@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Zamin.Utilities.Auth.ApiAuthentication.Options;
+namespace Arqom.Utilities.Auth.ApiAuthentication.Options;
 
 public sealed class ProviderOption
 {

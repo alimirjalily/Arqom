@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.Auth.ApiAuthentication.Sample.Users.Models;
+﻿namespace Arqom.Utilities.Auth.ApiAuthentication.Sample.Users.Models;
 
 public sealed class UserClaim
 {

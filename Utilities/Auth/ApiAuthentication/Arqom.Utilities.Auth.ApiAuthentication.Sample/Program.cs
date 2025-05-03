@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Cors.Infrastructure;
-using Zamin.Extensions.DependencyInjection;
+using Arqom.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddZaminInMemoryCaching();
-builder.Services.AddZaminNewtonSoftSerializer();
-builder.Services.AddZaminApiAuthentication(builder.Configuration, "ApiAuthentication");
+builder.Services.AddArqomInMemoryCaching();
+builder.Services.AddArqomNewtonSoftSerializer();
+builder.Services.AddArqomApiAuthentication(builder.Configuration, "ApiAuthentication");
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

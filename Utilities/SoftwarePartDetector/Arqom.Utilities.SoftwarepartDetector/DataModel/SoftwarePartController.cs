@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.SoftwarePartDetector.DataModel;
+﻿namespace Arqom.Utilities.SoftwarePartDetector.DataModel;
 
 public class SoftwarePartController
 {

@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Zamin.Utilities.SoftwarePartDetector;
-using Zamin.Utilities.SoftwarePartDetector.Authentications;
-using Zamin.Utilities.SoftwarePartDetector.Options;
-using Zamin.Utilities.SoftwarePartDetector.Publishers;
-using Zamin.Utilities.SoftwarePartDetector.Services;
+using Arqom.Utilities.SoftwarePartDetector;
+using Arqom.Utilities.SoftwarePartDetector.Authentications;
+using Arqom.Utilities.SoftwarePartDetector.Options;
+using Arqom.Utilities.SoftwarePartDetector.Publishers;
+using Arqom.Utilities.SoftwarePartDetector.Services;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 public static class SoftwarePartDetectorServiceCollectionExtensions
 {
     public static IServiceCollection AddSoftwarePartDetector(this IServiceCollection services, IConfiguration configuration, string sectionName)

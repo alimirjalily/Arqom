@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.Auth.ApiAuthentication.Options;
+﻿namespace Arqom.Utilities.Auth.ApiAuthentication.Options;
 
 public class JwtTokenConfigOption
 {

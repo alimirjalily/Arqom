@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Zamin.Utilities.Auth.ApiAuthentication.Options;
+using Arqom.Utilities.Auth.ApiAuthentication.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class ApiAuthenticationServiceCollectionExtensions
 {
-    public static IServiceCollection AddZaminApiAuthentication(this IServiceCollection services, IConfiguration configuration, string sectionName)
-        => services.AddZaminApiAuthentication(configuration.GetSection(sectionName));
+    public static IServiceCollection AddArqomApiAuthentication(this IServiceCollection services, IConfiguration configuration, string sectionName)
+        => services.AddArqomApiAuthentication(configuration.GetSection(sectionName));
 
-    public static IServiceCollection AddZaminApiAuthentication(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddArqomApiAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<ApiAuthenticationOption>(configuration);
         var option = configuration.Get<ApiAuthenticationOption>() ?? new();
@@ -18,7 +18,7 @@ public static class ApiAuthenticationServiceCollectionExtensions
         return services.AddAuthentication(option);
     }
 
-    public static IServiceCollection AddZaminApiAuthentication(this IServiceCollection services, Action<ApiAuthenticationOption> action)
+    public static IServiceCollection AddArqomApiAuthentication(this IServiceCollection services, Action<ApiAuthenticationOption> action)
     {
         services.Configure(action);
         var option = new ApiAuthenticationOption();

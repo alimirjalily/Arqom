@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.SoftwarePartDetector.Options;
+﻿namespace Arqom.Utilities.SoftwarePartDetector.Options;
 
 public class SoftwarePartDetectorOptions
 {

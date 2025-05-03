@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace Zamin.Utilities.Auth.ApiAuthentication.Models;
+namespace Arqom.Utilities.Auth.ApiAuthentication.Models;
 
 public class ClaimCacheModel
 {

@@ -1,4 +1,4 @@
-﻿namespace Zamin.Utilities.ScalarRegistration.Options;
+﻿namespace Arqom.Utilities.ScalarRegistration.Options;
 
 public class ScalarOption
 {

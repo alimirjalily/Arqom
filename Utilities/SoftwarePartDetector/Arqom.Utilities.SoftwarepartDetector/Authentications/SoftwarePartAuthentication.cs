@@ -1,8 +1,8 @@
 ﻿using IdentityModel.Client;
 using Microsoft.Extensions.Options;
-using Zamin.Utilities.SoftwarePartDetector.Options;
+using Arqom.Utilities.SoftwarePartDetector.Options;
 
-namespace Zamin.Utilities.SoftwarePartDetector.Authentications;
+namespace Arqom.Utilities.SoftwarePartDetector.Authentications;
 
 public class SoftwarePartAuthentication : ISoftwarePartAuthentication
 {

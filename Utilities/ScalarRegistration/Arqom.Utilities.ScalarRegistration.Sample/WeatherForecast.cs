@@ -1,4 +1,4 @@
-namespace Zamin.Utilities.ScalarRegistration.Sample;
+namespace Arqom.Utilities.ScalarRegistration.Sample;
 
 public class WeatherForecast
 {

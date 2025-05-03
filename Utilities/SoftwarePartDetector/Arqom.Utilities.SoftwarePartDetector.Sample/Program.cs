@@ -1,12 +1,12 @@
-using Zamin.Extensions.DependencyInjection;
-using Zamin.Utilities.SoftwarePartDetector.Services;
+using Arqom.Extensions.DependencyInjection;
+using Arqom.Utilities.SoftwarePartDetector.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddZaminMicrosoftSerializer();
+builder.Services.AddArqomMicrosoftSerializer();
 
 builder.Services.AddSoftwarePartDetector(builder.Configuration, "SoftwarePart");
 

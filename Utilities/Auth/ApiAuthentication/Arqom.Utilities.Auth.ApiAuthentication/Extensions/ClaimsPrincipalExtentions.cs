@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
-using Zamin.Utilities.Auth.ApiAuthentication.Options;
+using Arqom.Utilities.Auth.ApiAuthentication.Options;
 
-namespace Zamin.Utilities.Auth.ApiAuthentication.Extensions;
+namespace Arqom.Utilities.Auth.ApiAuthentication.Extensions;
 
 public static class ClaimsPrincipalExtentions
 {

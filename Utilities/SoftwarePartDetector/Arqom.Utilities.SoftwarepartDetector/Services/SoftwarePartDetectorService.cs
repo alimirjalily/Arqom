@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
-using Zamin.Utilities.SoftwarePartDetector.Options;
-using Zamin.Utilities.SoftwarePartDetector.Publishers;
+using Arqom.Utilities.SoftwarePartDetector.Options;
+using Arqom.Utilities.SoftwarePartDetector.Publishers;
 
-namespace Zamin.Utilities.SoftwarePartDetector.Services;
+namespace Arqom.Utilities.SoftwarePartDetector.Services;
 
 public class SoftwarePartDetectorService
 {

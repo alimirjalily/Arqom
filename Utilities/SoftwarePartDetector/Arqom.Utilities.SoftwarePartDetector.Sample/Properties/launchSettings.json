@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Zamin.Utilities.SoftwarePartDetector.Sample": {
+    "Arqom.Utilities.SoftwarePartDetector.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

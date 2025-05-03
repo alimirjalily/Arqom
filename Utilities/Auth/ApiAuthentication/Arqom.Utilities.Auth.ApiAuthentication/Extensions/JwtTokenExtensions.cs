@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
-using Zamin.Utilities.Auth.ApiAuthentication.Extensions;
-using Zamin.Utilities.Auth.ApiAuthentication.Options;
+using Arqom.Utilities.Auth.ApiAuthentication.Extensions;
+using Arqom.Utilities.Auth.ApiAuthentication.Options;
 
-namespace Zamin.Extensions.DependencyInjection;
+namespace Arqom.Extensions.DependencyInjection;
 
 public static class JwtTokenExtensions
 {

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Zamin.Utilities.Auth.ApiAuthentication.Sample.Users.Models;
+using Arqom.Utilities.Auth.ApiAuthentication.Sample.Users.Models;
 
-namespace Zamin.Utilities.Auth.ApiAuthentication.Sample.Users;
+namespace Arqom.Utilities.Auth.ApiAuthentication.Sample.Users;
 
 [ApiController]
 [Route("[controller]")]

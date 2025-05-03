@@ -1,4 +1,4 @@
-namespace Zamin.Utilities.SoftwarePartDetector.Sample
+namespace Arqom.Utilities.SoftwarePartDetector.Sample
 {
     public class WeatherForecast
     {

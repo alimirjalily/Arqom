@@ -1,6 +1,6 @@
-﻿using Zamin.Utilities.SoftwarePartDetector.DataModel;
+﻿using Arqom.Utilities.SoftwarePartDetector.DataModel;
 
-namespace Zamin.Utilities.SoftwarePartDetector.Publishers;
+namespace Arqom.Utilities.SoftwarePartDetector.Publishers;
 
 public interface ISoftwarePartPublisher
 {
