@@ -1,0 +1,6 @@
+@Arqom.Extensions.Storage.Local.Sample_HostAddress = http://localhost:5090
+
+GET {{Arqom.Extensions.Storage.Local.Sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
