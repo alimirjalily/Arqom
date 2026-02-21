@@ -7,10 +7,12 @@ namespace MiniBlog.Core.RequestResponse.Blogs.Commands.Create
     {
         public CreateBlogCommandValidator(ITranslator translator)
         {
-            RuleFor(c => c.Title)
-                .NotNull().WithMessage(translator["Required", "Title"])
-                .MinimumLength(2).WithMessage(translator["MinimumLength", "Title", "2"])
-                .MaximumLength(100).WithMessage(translator["MaximumLength", "Title", "100"]);
+            //RuleFor(c => c.Title)
+            //    .NotNull().WithMessage(translator["Required", "Title"])
+            //    .MinimumLength(2).WithMessage(translator["MinimumLength", "Title", "2"])
+            //    .MaximumLength(100).WithMessage(translator["MaximumLength", "Title", "100"]);
+
+            RuleFor(x => x.Title).MinimumLength(2).WithErrorCode("Blog.Title.2");
 
             RuleFor(c => c.Description)
                 .NotNull().WithMessage(translator["Required", "Description"]).WithErrorCode("1")

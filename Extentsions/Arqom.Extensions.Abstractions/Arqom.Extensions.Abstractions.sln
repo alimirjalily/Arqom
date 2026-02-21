@@ -25,6 +25,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arqom.Extensions.ChangeData
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arqom.Extensions.Storage.Abstractions", "Arqom.Extensions.Storage.Abstractions\Arqom.Extensions.Storage.Abstractions.csproj", "{D4A354C3-8285-4AD3-9EB7-65037F6783DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arqom.Extensions.Payment.Abstractions", "Arqom.Extensions.Payment.Abstractions\Arqom.Extensions.Payment.Abstractions.csproj", "{B9E065BD-C590-4BD1-909A-E0448F0B33C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arqom.Extensions.Sms.Abstractions", "Arqom.Extensions.Sms.Abstractions\Arqom.Extensions.Sms.Abstractions.csproj", "{A87A6722-1086-409D-BDDB-4613D66B7AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arqom.Extensions.PaymentGateways.Abstractions", "Arqom.Extensions.PaymentGateways.Abstractions\Arqom.Extensions.PaymentGateways.Abstractions.csproj", "{FD62B7D8-8D7E-4ECB-9D95-3699E16DBB2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +81,18 @@ Global
 		{D4A354C3-8285-4AD3-9EB7-65037F6783DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4A354C3-8285-4AD3-9EB7-65037F6783DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4A354C3-8285-4AD3-9EB7-65037F6783DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E065BD-C590-4BD1-909A-E0448F0B33C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E065BD-C590-4BD1-909A-E0448F0B33C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E065BD-C590-4BD1-909A-E0448F0B33C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E065BD-C590-4BD1-909A-E0448F0B33C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A87A6722-1086-409D-BDDB-4613D66B7AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87A6722-1086-409D-BDDB-4613D66B7AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87A6722-1086-409D-BDDB-4613D66B7AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87A6722-1086-409D-BDDB-4613D66B7AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD62B7D8-8D7E-4ECB-9D95-3699E16DBB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD62B7D8-8D7E-4ECB-9D95-3699E16DBB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD62B7D8-8D7E-4ECB-9D95-3699E16DBB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD62B7D8-8D7E-4ECB-9D95-3699E16DBB2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

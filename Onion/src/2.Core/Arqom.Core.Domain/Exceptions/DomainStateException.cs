@@ -6,34 +6,18 @@
 /// </summary>
 public abstract class DomainStateException : Exception
 {
-    /// <summary>
-    /// لیست پارامتر‌های خطا
-    /// در صورتی که پارامتری وجود داشته باشد message را به صورت الگو ارسال کرده و مقادیر پارامتر‌ها در محل مخصوص در الگو قرار می‌گیرند.
-    /// </summary>
-    public string[] Parameters { get; set; }
 
-    public DomainStateException(string message, params string[] parameters) : base(message)
+    public IReadOnlyCollection<DomainError> Errors { get; }
+
+    public DomainStateException(IEnumerable<DomainError> errors)
     {
-        Parameters = parameters;
-
+        Errors = errors.ToList().AsReadOnly();
     }
 
-    public override string ToString()
+    public DomainStateException(string code, params string?[] args)
+    : this(new[] { new DomainError(code, args) })
     {
-        if (Parameters?.Length < 1)
-        {
-            return Message;
-        }
-
-
-        string result = Message;
-
-        for (int i = 0; i < Parameters.Length; i++)
-        {
-            string placeHolder = $"{{{i}}}";
-            result = result.Replace(placeHolder, Parameters[i]);
-        }
-
-        return result;
     }
+
+
 }

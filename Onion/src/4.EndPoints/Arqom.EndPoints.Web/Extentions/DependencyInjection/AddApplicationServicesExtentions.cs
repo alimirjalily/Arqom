@@ -1,8 +1,9 @@
-﻿using FluentValidation;
-using Arqom.Core.ApplicationServices.Commands;
+﻿using Arqom.Core.ApplicationServices.Commands;
+using Arqom.Core.ApplicationServices.Commands.Transactions;
 using Arqom.Core.ApplicationServices.Events;
 using Arqom.Core.ApplicationServices.Queries;
 using Arqom.Core.Contracts.ApplicationServices.Events;
+using FluentValidation;
 
 namespace Arqom.Extensions.DependencyInjection;
 
@@ -26,6 +27,8 @@ public static class AddApplicationServicesExtensions
         services.AddTransient<CommandDispatcher, CommandDispatcher>();
         services.AddTransient<CommandDispatcherDecorator, CommandDispatcherDomainExceptionHandlerDecorator>();
         services.AddTransient<CommandDispatcherDecorator, CommandDispatcherValidationDecorator>();
+        services.AddTransient<CommandDispatcherDecorator, TransactionCommandDispatcherDecorator>();
+
 
         services.AddTransient<ICommandDispatcher>(c =>
         {

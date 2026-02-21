@@ -1,9 +1,9 @@
-﻿using MiniBlog.Core.Contracts.Blogs.Commands;
-using MiniBlog.Core.Domain.Blogs.Entities;
-using MiniBlog.Core.RequestResponse.Blogs.Commands.Create;
-using Arqom.Core.ApplicationServices.Commands;
+﻿using Arqom.Core.ApplicationServices.Commands;
 using Arqom.Core.RequestResponse.Commands;
 using Arqom.Utilities;
+using MiniBlog.Core.Domain.Blogs.Entities;
+using MiniBlog.Core.Domain.Blogs.Repositories;
+using MiniBlog.Core.RequestResponse.Blogs.Commands.Create;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Commands.Create;
 
@@ -22,9 +22,6 @@ public class CreateBlogCommandHandler : CommandHandler<CreateBlogCommand, Guid>
         Blog blog = Blog.Create(command.Title, command.Description);
 
         await _blogCommandRepository.InsertAsync(blog);
-
-        await _blogCommandRepository.CommitAsync();
-
         return Ok(blog.BusinessId.Value);
     }
 }

@@ -1,10 +1,9 @@
 ﻿using Arqom.Core.Domain.Events;
 
-namespace Arqom.Core.Domain.Entities
+namespace Arqom.Core.Domain.Entities;
+
+public interface IAggregateRoot : IHasBusinessId
 {
-    public interface IAggregateRoot
-    {
-        void ClearEvents();
-        IEnumerable<IDomainEvent> GetEvents();
-    }
+    void ClearEvents();
+    IEnumerable<IDomainEvent> GetEvents();
 }

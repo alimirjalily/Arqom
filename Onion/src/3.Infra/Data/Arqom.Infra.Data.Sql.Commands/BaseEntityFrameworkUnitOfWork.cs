@@ -1,19 +1,22 @@
 ﻿using Arqom.Core.Contracts.Data.Commands;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Arqom.Infra.Data.Sql.Commands;
 public abstract class BaseEntityFrameworkUnitOfWork<TDbContext> : IUnitOfWork
     where TDbContext : BaseCommandDbContext
 {
     protected readonly TDbContext _dbContext;
+    private IDbContextTransaction _currentTransaction;
 
     public BaseEntityFrameworkUnitOfWork(TDbContext dbContext)
     {
         _dbContext = dbContext;
     }
 
-    public void BeginTransaction()
+    public async Task BeginTransactionAsync()
     {
-        _dbContext.BeginTransaction();
+        if (_currentTransaction != null) return;
+        _currentTransaction = await _dbContext.Database.BeginTransactionAsync();
     }
 
     public int Commit()
@@ -22,20 +25,43 @@ public abstract class BaseEntityFrameworkUnitOfWork<TDbContext> : IUnitOfWork
         return result;
     }
 
-    public async Task<int> CommitAsync()
+    public async Task<int> CommitAsync(CancellationToken cancellationToken= default)
     {
-        var result = await _dbContext.SaveChangesAsync();
+        var result = await _dbContext.SaveChangesAsync(cancellationToken);
         return result;
     }
 
-    public void CommitTransaction()
+    public async Task CommitTransactionAsync()
     {
-        _dbContext.CommitTransaction();
+        try
+        {
+            await _currentTransaction?.CommitAsync()!;
+        }
+        finally
+        {
+            await ReleaseCurrentTransaction();
+        }
     }
 
-    public void RollbackTransaction()
+    public async Task RollbackTransactionAsync()
     {
-        _dbContext.RollbackTransaction();
+        try
+        {
+            await _currentTransaction?.RollbackAsync()!;
+        }
+        finally
+        {
+            await ReleaseCurrentTransaction();
+        }
+    }
+
+    private async Task ReleaseCurrentTransaction()
+    {
+        if (_currentTransaction != null)
+        {
+            await _currentTransaction.DisposeAsync();
+            _currentTransaction = null!;
+        }
     }
 }
 

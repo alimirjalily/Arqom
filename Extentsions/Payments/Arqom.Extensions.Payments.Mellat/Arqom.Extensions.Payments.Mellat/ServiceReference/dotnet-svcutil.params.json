@@ -1,0 +1,18 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "8.0.0",
+  "options": {
+    "inputs": [
+      "https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference"
+    ],
+    "outputFile": "Reference.cs",
+    "references": [
+      "Arqom.Extensions.Payment.Abstractions, {Arqom.Extensions.Payment.Abstractions, 9.0.3}"
+    ],
+    "targetFramework": "net9.0",
+    "typeReuseMode": "All"
+  }
+}

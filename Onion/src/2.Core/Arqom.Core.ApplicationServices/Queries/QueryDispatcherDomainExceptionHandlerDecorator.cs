@@ -59,24 +59,14 @@ public class QueryDispatcherDomainExceptionHandlerDecorator : QueryDispatcherDec
             Status = ApplicationServiceStatus.InvalidDomainState
         };
 
-        queryResult.AddMessage(GetExceptionText(ex));
+        queryResult.AddMessages(ex.Errors.Select(e =>
+            new ApplicationMessage(
+                e.Code,
+                MessageSeverity.Error,
+                e.Args)));
 
         return queryResult;
     }
 
-    private string GetExceptionText(DomainStateException domainStateException)
-    {
-        var translator = _serviceProvider.GetService<ITranslator>();
-        if (translator == null)
-            return domainStateException.ToString();
-
-        var result = (domainStateException?.Parameters.Any() == true) ?
-             translator[domainStateException.Message, domainStateException.Parameters] :
-               translator[domainStateException?.Message];
-
-        _logger.LogInformation(ArqomEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
-
-        return result;
-    }
     #endregion
 }

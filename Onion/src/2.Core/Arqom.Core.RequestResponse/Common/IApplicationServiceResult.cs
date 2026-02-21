@@ -1,6 +1,6 @@
 ﻿namespace Arqom.Core.RequestResponse.Common;
 public interface IApplicationServiceResult
 {
-    IEnumerable<string> Messages { get; }
+    IEnumerable<ApplicationMessage> Messages { get; }
     ApplicationServiceStatus Status { get; set; }
 }

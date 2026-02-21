@@ -20,7 +20,7 @@ public class Blog : AggregateRoot<int>
     {
 
     }
-    public Blog(Title title, Description description)
+    private Blog(Title title, Description description)
     {
         Title = title;
         Description = description;
@@ -32,9 +32,9 @@ public class Blog : AggregateRoot<int>
     #region Commands
     public static Blog Create(Title title, Description description) => new(title, description);
 
-    public void Update(Title title, Description description)
+    public void Update(string title, Description description)
     {
-        Title = title;
+        Title =title;
         Description = description;
 
         AddEvent(new BlogUpdated(BusinessId.Value, Title.Value, Description.Value));

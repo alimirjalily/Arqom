@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using MiniBlog.Core.Contracts.People;
+﻿using Arqom.Core.Contracts.ApplicationServices.Events;
+using Microsoft.Extensions.Logging;
 using MiniBlog.Core.Domain.Blogs.Events;
 using MiniBlog.Core.Domain.People.Entities;
-using Arqom.Core.Contracts.ApplicationServices.Events;
+using MiniBlog.Core.Domain.People.Repositories;
 
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Events.BlogCreatedHandler;
@@ -27,7 +27,6 @@ public class BlogCreatedHandler : IDomainEventHandler<BlogCreated>
                 LastName = DateTime.Now.ToLongTimeString(),
             };
             await _personCommandRepository.InsertAsync(person);
-            await _personCommandRepository.CommitAsync();
 
             _logger.LogInformation("Handeled {Event} in BlogCreatedHandler", Event.GetType().Name);
             await Task.CompletedTask;

@@ -1,0 +1,6 @@
+@Arqom.Extensions.Payments.Zarinpal.Sample_HostAddress = http://localhost:5176
+
+GET {{Arqom.Extensions.Payments.Zarinpal.Sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

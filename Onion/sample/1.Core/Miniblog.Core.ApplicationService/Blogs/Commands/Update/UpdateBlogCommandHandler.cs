@@ -1,9 +1,9 @@
-﻿using MiniBlog.Core.Contracts.Blogs.Commands;
-using MiniBlog.Core.RequestResponse.Blogs.Commands.Update;
-using Arqom.Core.ApplicationServices.Commands;
+﻿using Arqom.Core.ApplicationServices.Commands;
 using Arqom.Core.Domain.Exceptions;
 using Arqom.Core.RequestResponse.Commands;
 using Arqom.Utilities;
+using MiniBlog.Core.Domain.Blogs.Repositories;
+using MiniBlog.Core.RequestResponse.Blogs.Commands.Update;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Commands.Update;
 
@@ -25,8 +25,6 @@ public sealed class UpdateBlogCommandHandler : CommandHandler<UpdateBlogCommand>
             throw new InvalidEntityStateException("بلاگ یافت نشد");
 
         blog.Update(command.Title, command.Description);
-
-        await _blogCommandRepository.CommitAsync();
 
         return Ok();
     }

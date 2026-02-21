@@ -1,7 +1,7 @@
-﻿using MiniBlog.Core.Contracts.Blogs.Commands;
+﻿using Arqom.Infra.Data.Sql.Commands;
 using MiniBlog.Core.Domain.Blogs.Entities;
+using MiniBlog.Core.Domain.Blogs.Repositories;
 using MiniBlog.Infra.Data.Sql.Commands.Common;
-using Arqom.Infra.Data.Sql.Commands;
 
 namespace MiniBlog.Infra.Data.Sql.Commands.Blogs
 {

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arqom.Extensions.PaymentGateways.Zarinpal\Arqom.Extensions.PaymentGateways.Zarinpal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Arqom.Extensions.PaymentGateways.Abstractions">
+      <HintPath>..\..\..\Arqom.Extensions.Abstractions\Arqom.Extensions.PaymentGateways.Abstractions\bin\Debug\net9.0\Arqom.Extensions.PaymentGateways.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

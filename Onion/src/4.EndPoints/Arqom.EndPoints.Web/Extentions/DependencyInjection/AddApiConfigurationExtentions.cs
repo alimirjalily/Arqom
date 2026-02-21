@@ -1,6 +1,7 @@
 ﻿using FluentValidation.AspNetCore;
 using System.Data.SqlClient;
 using Arqom.EndPoints.Web.Middlewares.ApiExceptionHandler;
+using Arqom.Infra.Data.Sql.Commands;
 
 namespace Arqom.Extensions.DependencyInjection;
 

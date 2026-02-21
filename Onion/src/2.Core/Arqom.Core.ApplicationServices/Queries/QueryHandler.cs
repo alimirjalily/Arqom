@@ -41,15 +41,5 @@ public abstract class QueryHandler<TQuery, TData> : IQueryHandler<TQuery, TData>
         _ArqomServices = ArqomServices;
     }
 
-    protected void AddMessage(string message)
-    {
-        result.AddMessage(_ArqomServices.Translator[message]);
-    }
-
-    protected void AddMessage(string message, params string[] arguments)
-    {
-        result.AddMessage(_ArqomServices.Translator[message, arguments]);
-    }
-
     public abstract Task<QueryResult<TData>> Handle(TQuery query);
 }

@@ -1,0 +1,6 @@
+@Arqom.Extensions.Payments.Mellat.Sample_HostAddress = http://localhost:5269
+
+GET {{Arqom.Extensions.Payments.Mellat.Sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

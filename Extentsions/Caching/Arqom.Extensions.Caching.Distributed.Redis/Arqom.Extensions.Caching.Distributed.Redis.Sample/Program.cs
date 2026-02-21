@@ -14,6 +14,8 @@ builder.Services.AddArqomRedisDistributedCache(option =>
     option.InstanceName = "Arqom.Sample.";
 });
 
+builder.Services.AddArqomNewtonSoftSerializer();
+
 //Middlewares
 
 var app = builder.Build();

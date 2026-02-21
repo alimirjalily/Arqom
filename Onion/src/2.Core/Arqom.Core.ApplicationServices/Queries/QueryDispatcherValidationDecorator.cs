@@ -57,10 +57,8 @@ public class QueryDispatcherValidationDecorator : QueryDispatcherDecorator
                 {
                     Status = ApplicationServiceStatus.ValidationError
                 };
-                foreach (var item in validationResult.Errors)
-                {
-                    res.AddMessage(item.ErrorMessage);
-                }
+
+                res.AddMessages(validationResult.Errors.Select(c => new ApplicationMessage(c.ErrorCode, MessageSeverity.Error)));
             }
         }
         else

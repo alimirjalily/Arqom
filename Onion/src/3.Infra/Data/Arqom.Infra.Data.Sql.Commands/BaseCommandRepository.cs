@@ -1,11 +1,11 @@
-﻿using System.Linq.Expressions;
+﻿using Arqom.Core.Contracts.Data.Commands;
 using Arqom.Core.Domain.Entities;
+using Arqom.Core.Domain.Repositories;
 using Arqom.Core.Domain.ValueObjects;
-using Arqom.Core.Contracts.Data.Commands;
-using System.Security.Cryptography;
+using System.Linq.Expressions;
 
 namespace Arqom.Infra.Data.Sql.Commands;
-public class BaseCommandRepository<TEntity, TDbContext, TId> : ICommandRepository<TEntity, TId>, IUnitOfWork
+public class BaseCommandRepository<TEntity, TDbContext, TId> : ICommandRepository<TEntity, TId>
     where TEntity : AggregateRoot<TId>
     where TDbContext : BaseCommandDbContext
      where TId : struct,
@@ -141,39 +141,4 @@ public class BaseCommandRepository<TEntity, TDbContext, TId> : ICommandRepositor
         return await _dbContext.Set<TEntity>().AnyAsync(expression);
     }
     #endregion
-
-    #region Transaction management
-    public int Commit()
-    {
-        return _dbContext.SaveChanges();
-    }
-
-    public Task<int> CommitAsync()
-    {
-        return _dbContext.SaveChangesAsync();
-    }
-    public void BeginTransaction()
-    {
-        _dbContext.BeginTransaction();
-    }
-
-    public void CommitTransaction()
-    {
-        _dbContext.CommitTransaction();
-    }
-    public void RollbackTransaction()
-    {
-        _dbContext.RollbackTransaction();
-    }
-    #endregion
-}
-
-
-public class BaseCommandRepository<TEntity, TDbContext> : BaseCommandRepository<TEntity, TDbContext, long>
-    where TEntity : AggregateRoot
-    where TDbContext : BaseCommandDbContext
-{
-    public BaseCommandRepository(TDbContext dbContext) : base(dbContext)
-    {
-    }
 }

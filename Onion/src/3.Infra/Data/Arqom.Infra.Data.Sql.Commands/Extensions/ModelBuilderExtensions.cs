@@ -9,7 +9,7 @@ public static class ModelBuilderExtensions
     {
         foreach (var entityType in modelBuilder.Model
                                                .GetEntityTypes()
-                                               .Where(e => typeof(AggregateRoot).IsAssignableFrom(e.ClrType) ||
+                                               .Where(e => typeof(IHasBusinessId).IsAssignableFrom(e.ClrType) ||
                                                     typeof(Entity).IsAssignableFrom(e.ClrType)))
         {
             modelBuilder.Entity(entityType.ClrType)

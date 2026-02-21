@@ -1,9 +1,9 @@
-﻿using MiniBlog.Core.Contracts.Blogs.Commands;
-using MiniBlog.Core.RequestResponse.Blogs.Commands.RemovePost;
-using Arqom.Core.ApplicationServices.Commands;
+﻿using Arqom.Core.ApplicationServices.Commands;
 using Arqom.Core.Domain.Exceptions;
 using Arqom.Core.RequestResponse.Commands;
 using Arqom.Utilities;
+using MiniBlog.Core.Domain.Blogs.Repositories;
+using MiniBlog.Core.RequestResponse.Blogs.Commands.RemovePost;
 
 namespace MiniBlog.Core.ApplicationService.Blogs.Commands.RemovePost;
 
@@ -25,8 +25,6 @@ public sealed class RemovePostCommandHandler : CommandHandler<RemovePostCommand>
             throw new InvalidEntityStateException("بلاگ یافت نشد");
 
         blog.RemovePost(command.PostId);
-
-        await _blogCommandRepository.CommitAsync();
 
         return Ok();
     }

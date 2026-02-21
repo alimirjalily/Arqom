@@ -5,13 +5,7 @@ namespace Arqom.Core.Domain.Entities;
 /// کلاس پایه برای تمامی Entityها موجود در سامانه
 /// </summary>
 
-public abstract class Entity<TId>: IAuditableEntity
-          where TId : struct,
-          IComparable,
-          IComparable<TId>,
-          IConvertible,
-          IEquatable<TId>,
-          IFormattable
+public abstract class Entity<TId>: IAuditableEntity, IHasBusinessId
 {
     /// <summary>
     /// شناسه عددی Entityها
@@ -32,7 +26,14 @@ public abstract class Entity<TId>: IAuditableEntity
     /// بار جلو گیری از این مورد برای همه Entityها باید سازنده‌هایی تعریف شود که مقدار ورودی دارند.
     /// برای اینکه بتوان از همین Entityها برای فرایند ذخیره سازی و بازیابی از دیتابیس به کمک ORMها استفاده کرد، ضروری است که سازنده پیش‌فرض با سطح دسترسی بالا مثل Protected یا Private ایجاد شود.
     /// </summary>
-    protected Entity() { }
+    protected Entity() { 
+        BusinessId = BusinessId.FromGuid(Guid.NewGuid());
+    }
+
+    protected Entity(BusinessId businessId)
+    {
+        BusinessId = businessId;
+    }
 
 
     #region Equality Check

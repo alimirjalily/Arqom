@@ -9,6 +9,14 @@ namespace Arqom.Core.RequestResponse.Commands;
 public class CommandResult : ApplicationServiceResult
 {
 
+    public static CommandResult ValidationFailed()
+    {
+        return new CommandResult
+        {
+            Status = ApplicationServiceStatus.ValidationError,
+        };
+    }
+
 }
 /// <summary>
 /// نتیجه انجام هر عملیات به کمک این کلاس بازگشت داده می‌شود.
@@ -19,7 +27,64 @@ public class CommandResult : ApplicationServiceResult
 /// <typeparam name="TData">نوع داده‌ای که بازگشت داده می‌شود</typeparam>
 public class CommandResult<TData> : CommandResult
 {
-    public TData? _data;
-    public TData? Data => _data;
+    public TData? Data { get; private set; }
+
+    private CommandResult() { 
+
+    }
+
+    private CommandResult(TData data)
+    {
+        Data = data;
+    }
+
+    public static CommandResult<TData> From(CommandResult source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source));
+
+        var result = new CommandResult<TData>
+        {
+            Status = source.Status
+        };
+
+        result.AddMessages(source.Messages);
+
+        return result;
+    }
+
+    public static CommandResult<TData> Ok(TData data)
+    {
+        var result = new CommandResult<TData>
+        {
+            Status = ApplicationServiceStatus.Ok,
+            Data = data
+        };
+
+        return result;
+    }
+
+    public static CommandResult<TData> Result(TData data, ApplicationServiceStatus status)
+    {
+        var result = new CommandResult<TData>
+        {
+            Status = status,
+            Data = data
+        };
+
+        return result;
+    }
+
+    public static CommandResult<TData> InvalidDomainState()
+    {
+        var result = new CommandResult<TData>
+        {
+            Status = ApplicationServiceStatus.InvalidDomainState
+        };
+
+        return result;
+    }
+
+
 }
 

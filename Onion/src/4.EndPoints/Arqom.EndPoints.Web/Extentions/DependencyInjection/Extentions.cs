@@ -10,10 +10,10 @@ public static class Extensions
     {
 
         var assemblies = GetAssemblies(assemblyNamesForSearch);
-        services.AddArqomApplicationServices(assemblies).AddArqomDataAccess(assemblies).AddArqomUntilityServices().AddCustomeDepenecies(assemblies);
+        services.AddArqomApplicationServices(assemblies).AddArqomDataAccess(assemblies).AddArqomUtilityServices().AddCustomDependencies(assemblies);
         return services;
     }
-    public static IServiceCollection AddCustomeDepenecies(this IServiceCollection services, IEnumerable<Assembly> assemblies)
+    public static IServiceCollection AddCustomDependencies(this IServiceCollection services, IEnumerable<Assembly> assemblies)
     {
         return services.AddWithTransientLifetime(assemblies, typeof(ITransientLifetime))
             .AddWithScopedLifetime(assemblies, typeof(IScopeLifetime))

@@ -6,8 +6,8 @@
 /// <param name="parameters">پارامتر‌ها که در صورت وجود در الگوی پیام جایگذاری می‌شوند</param>
 public class InvalidValueObjectStateException : DomainStateException
 {
-    public InvalidValueObjectStateException(string message, params string[] parameters) : base(message)
+    public InvalidValueObjectStateException(string code, params string[] parameters) : base(code)
     {
-        Parameters = parameters;
+       new DomainError(code, parameters);
     }
 }

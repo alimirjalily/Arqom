@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Arqom.Core.RequestResponse.Commands;
 using Arqom.Core.RequestResponse.Common;
 using Arqom.Extensions.Logger.Abstractions;
+using Arqom.Core.Contracts.ApplicationServices.Commands;
 
 namespace Arqom.Core.ApplicationServices.Commands;
 
@@ -29,7 +30,7 @@ public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
     public override async Task<CommandResult> Send<TCommand>(TCommand command)
     {
         _logger.LogDebug(ArqomEventId.CommandValidation, "Validating command of type {CommandType} With value {Command}  start at :{StartDateTime}", command.GetType(), command, DateTime.Now);
-        var validationResult = Validate<TCommand, CommandResult>(command);
+        var validationResult = Validate<TCommand>(command);
 
         if (validationResult != null)
         {
@@ -44,12 +45,12 @@ public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
     {
         _logger.LogDebug(ArqomEventId.CommandValidation, "Validating command of type {CommandType} With value {Command}  start at :{StartDateTime}", command.GetType(), command, DateTime.Now);
 
-        var validationResult = Validate<TCommand, CommandResult<TData>>(command);
+        var validationResult = Validate<TCommand>(command);
 
         if (validationResult != null)
         {
             _logger.LogInformation(ArqomEventId.CommandValidation, "Validating command of type {CommandType} With value {Command}  failed. Validation errors are: {ValidationErrors}", command.GetType(), command, validationResult.Messages);
-            return validationResult;
+            return CommandResult<TData>.From(validationResult);
         }
         _logger.LogDebug(ArqomEventId.CommandValidation, "Validating command of type {CommandType} With value {Command}  finished at :{EndDateTime}", command.GetType(), command, DateTime.Now);
         return await _commandDispatcher.Send<TCommand, TData>(command);
@@ -57,31 +58,46 @@ public class CommandDispatcherValidationDecorator : CommandDispatcherDecorator
     #endregion
 
     #region Privaite Methods
-    private TValidationResult Validate<TCommand, TValidationResult>(TCommand command) where TValidationResult : ApplicationServiceResult, new()
+    private CommandResult? Validate<TCommand>(TCommand command)
     {
         var validator = _serviceProvider.GetService<IValidator<TCommand>>();
-        TValidationResult res = null;
 
-        if (validator != null)
+        if (validator is null)
         {
-            var validationResult = validator.Validate(command);
-            if (!validationResult.IsValid)
-            {
-                res = new()
-                {
-                    Status = ApplicationServiceStatus.ValidationError
-                };
-                foreach (var item in validationResult.Errors)
-                {
-                    res.AddMessage(item.ErrorMessage);
-                }
-            }
+            _logger.LogInformation(
+                ArqomEventId.CommandValidation,
+                "No validator found for {CommandType}",
+                typeof(TCommand)
+            );
+            return null;
         }
-        else
+
+        var result = validator.Validate(command);
+
+        if (result.IsValid)
+            return null;
+
+        var commandResult = CommandResult.ValidationFailed();
+
+        foreach (var failure in result.Errors)
         {
-            _logger.LogInformation(ArqomEventId.CommandValidation, "There is not any validator for {CommandType}", command.GetType());
+            commandResult.AddMessage(
+                new ApplicationMessage(
+                    code: failure.ErrorCode ?? "validation.error",
+                    severity: MessageSeverity.Error,
+                    args: new[] { failure.PropertyName }
+                )
+            );
         }
-        return res;
+
+        _logger.LogWarning(
+            ArqomEventId.CommandValidation,
+            "Validation failed for {CommandType}. ErrorCodes: {Codes}",
+            typeof(TCommand),
+            result.Errors.Select(e => e.ErrorCode)
+        );
+
+        return commandResult;
     }
     #endregion
 }

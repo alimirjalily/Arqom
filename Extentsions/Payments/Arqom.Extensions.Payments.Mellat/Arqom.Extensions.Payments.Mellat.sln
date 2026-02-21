@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arqom.Extensions.Payments.Mellat", "Arqom.Extensions.Payments.Mellat\Arqom.Extensions.Payments.Mellat.csproj", "{0AB2BF2D-3991-417E-9ED9-CAFD053C53B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arqom.Extensions.Payments.Mellat.Sample", "Arqom.Extensions.Payments.Mellat.Sample\Arqom.Extensions.Payments.Mellat.Sample.csproj", "{1D200CC2-8064-4132-9454-3D26468FEAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AB2BF2D-3991-417E-9ED9-CAFD053C53B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB2BF2D-3991-417E-9ED9-CAFD053C53B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB2BF2D-3991-417E-9ED9-CAFD053C53B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB2BF2D-3991-417E-9ED9-CAFD053C53B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D200CC2-8064-4132-9454-3D26468FEAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D200CC2-8064-4132-9454-3D26468FEAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D200CC2-8064-4132-9454-3D26468FEAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D200CC2-8064-4132-9454-3D26468FEAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56FFB78B-AEB2-41B1-A7F1-7373B5F23F82}
+	EndGlobalSection
+EndGlobal

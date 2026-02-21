@@ -1,10 +1,8 @@
 ﻿using Arqom.Core.Domain.Exceptions;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Arqom.Extensions.Logger.Abstractions;
-using Arqom.Extensions.Translations.Abstractions;
 using Arqom.Core.RequestResponse.Commands;
 using Arqom.Core.RequestResponse.Common;
+using Arqom.Extensions.Logger.Abstractions;
+using Microsoft.Extensions.Logging;
 
 namespace Arqom.Core.ApplicationServices.Commands;
 
@@ -84,37 +82,32 @@ public class CommandDispatcherDomainExceptionHandlerDecorator : CommandDispatche
             Status = ApplicationServiceStatus.InvalidDomainState
         };
 
-        commandResult.AddMessage(GetExceptionText(ex));
+        commandResult.AddMessages(
+        ex.Errors.Select(e =>
+            new ApplicationMessage(
+                e.Code,
+                MessageSeverity.Error,
+                e.Args))
+    );
 
         return commandResult;
     }
 
     private CommandResult<TData> DomainExceptionHandlingWithReturnValue<TCommand, TData>(DomainStateException ex)
     {
-        var commandResult = new CommandResult<TData>()
-        {
-            Status = ApplicationServiceStatus.InvalidDomainState
-        };
+        var commandResult =  CommandResult<TData>.InvalidDomainState();
 
-        commandResult.AddMessage(GetExceptionText(ex));
+
+        commandResult.AddMessages(
+            ex.Errors.Select(e =>
+                new ApplicationMessage(
+                    e.Code,
+                    MessageSeverity.Error,
+                    e.Args)));
 
         return commandResult;
     }
 
-    private string GetExceptionText(DomainStateException domainStateException)
-    {
-        var translator = _serviceProvider.GetService<ITranslator>();
-        if (translator == null)
-            return domainStateException.ToString();
-
-        var result = (domainStateException?.Parameters.Any() == true) ?
-             translator[domainStateException.Message, domainStateException.Parameters] :
-               translator[domainStateException?.Message];
-
-        _logger.LogInformation(ArqomEventId.DomainValidationException, "Domain Exception message is {DomainExceptionMessage}", result);
-
-        return result;
-    }
     #endregion
 }
 
