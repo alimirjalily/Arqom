@@ -61,8 +61,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arqom.Core.RequestResponse"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniBlog.Core.RequestResponse", "sample\1.Core\MiniBlog.Core.RequestResponse\MiniBlog.Core.RequestResponse.csproj", "{85746797-1FF6-42F0-8C1B-89120F08E194}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,7 +166,6 @@ Global
 		{0A096841-155A-4A97-A47B-69B4C9452A58} = {6B3484A3-098C-4922-9CE1-501F05B9A683}
 		{1DB0D0EE-6F37-4CDD-A544-6E0D27E600C8} = {B94044C5-9885-4847-872D-15E3C6ACD88D}
 		{85746797-1FF6-42F0-8C1B-89120F08E194} = {798492AF-C03F-43DD-BF5B-35F3D15D7D2C}
-		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {DC544674-9E95-4F6E-94C8-545A77391E66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5D1ECA0-C4FC-4886-ABDA-F867CC0914D9}
