@@ -2,7 +2,7 @@
 
 		<PropertyGroup>
 				<TargetFramework>net9.0</TargetFramework>
-				<Version>9.0.0</Version>
+				<Version>9.0.3</Version>
 				<Nullable>enable</Nullable>
 				<Authors>Ali Mirjalili</Authors>
 				<ImplicitUsings>enable</ImplicitUsings>
@@ -22,7 +22,7 @@
 				<PackageReference Include="Microsoft.Extensions.DependencyModel" Version="9.0.0" />
 				<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.0" />
 				<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.ObjectMappers.Abstractions" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.ObjectMappers.Abstractions" Version="9.0.3" />
 		</ItemGroup>
 
 </Project>

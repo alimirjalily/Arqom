@@ -8,8 +8,8 @@
 
 		<ItemGroup>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
-				<PackageReference Include="Arqom.Extensions.Serializers.Abstractions" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.Translations.Abstractions" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Serializers.Abstractions" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.Translations.Abstractions" Version="9.0.3" />
 				<PackageReference Include="Arqom.Extensions.Translations.Parrot" Version="9.0.0" />
 		</ItemGroup>
 

@@ -22,19 +22,19 @@
 				</PackageReference>
 				<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
 				<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
-				<PackageReference Include="Arqom.Extensions.Caching.InMemory" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.Events.PollingPublisher" Version="9.0.0-beta.1" />
-				<PackageReference Include="Arqom.Extensions.Events.PollingPublisher.Dal.Dapper" Version="9.0.0-beta.1" />
-				<PackageReference Include="Arqom.Extensions.MessageBus.MessageInbox" Version="9.0.0-beta.1" />
-				<PackageReference Include="Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper" Version="9.0.0-beta.1" />
-				<PackageReference Include="Arqom.Extensions.MessageBus.RabbitMQ" Version="8.0.1-beta.1" />
-				<PackageReference Include="Arqom.Extensions.ObjectMappers.AutoMapper" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.Serializers.Microsoft" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.Serializers.NewtonSoft" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.Translations.Parrot" Version="9.0.0" />
-				<PackageReference Include="Arqom.Extensions.UsersManagement" Version="9.0.0" />
+				<PackageReference Include="Arqom.Extensions.Caching.InMemory" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.Events.PollingPublisher" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.Events.PollingPublisher.Dal.Dapper" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.MessageInbox" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.MessageInbox.Dal.Dapper" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.MessageBus.RabbitMQ" Version="8.0.3" />
+				<PackageReference Include="Arqom.Extensions.ObjectMappers.AutoMapper" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.Serializers.Microsoft" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.Serializers.NewtonSoft" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.Translations.Parrot" Version="9.0.3" />
+				<PackageReference Include="Arqom.Extensions.UsersManagement" Version="9.1.3" />
 				<PackageReference Include="Arqom.Utilities.OpenTelemetryRegistration" Version="8.0.0-beta.2" />
-				<PackageReference Include="Arqom.Utilities.SerilogRegistration" Version="8.0.0" />
+				<PackageReference Include="Arqom.Utilities.SerilogRegistration" Version="9.0.0" />
 		</ItemGroup>
 
 		<ItemGroup>
